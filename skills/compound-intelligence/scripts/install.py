@@ -32,6 +32,14 @@ def install(destination=None, *, source=SKILL_ROOT):
     # never a successful installation or permission to replace it on a retry.
     shutil.copytree(source, target, ignore=shutil.ignore_patterns(
         '__pycache__','*.pyc','.DS_Store','.git','.env','.env.*','*.pem','*.key'))
+    # Full-repository installs use the same separate component as portable ZIPs.
+    component = source.parent.parent/'presentation'
+    if not (target/'presentation').exists() and (component/'render.py').is_file():
+        (target/'presentation').mkdir()
+        for name in ('render.py','workspace.html'):
+            if (component/name).is_symlink():
+                raise ValueError('Presentation source contains a symlink.')
+            shutil.copy2(component/name,target/'presentation'/name)
     return target
 
 

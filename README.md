@@ -1,14 +1,14 @@
-# Compound Intelligence · 0.3.1 (experimental)
+# Compound Intelligence · 0.3.2 (experimental)
 
 **Prepare a leadership move. Try it. Return with what happened.**
 
 An experimental coaching skill for Codex, grounded in 21 methods from Caroline Webb's *Leadership Intelligence*. It helps you work through one situation, understand why a move fits, and revisit the plan when reality brings new information.
 
-Version **0.3.1** packages manual case continuity and first-use installation/Jev onboarding. It is a preview for trying the coaching workflow, not a demonstrated upgrade in advice quality. Our small synthetic comparison did **not** establish that the core skill gives better single answers than the same strong model without it. Continuity has passed implementation checks and a fictional walkthrough; its value to real users remains unmeasured. See [validation](docs/PUBLIC-VALIDATION.md).
+Version **0.3.2** packages manual case continuity and first-use installation/Jev onboarding. It is a preview for trying the coaching workflow, not a demonstrated upgrade in advice quality. Our small synthetic comparison did **not** establish that the core skill gives better single answers than the same strong model without it. Continuity has passed implementation checks and a fictional walkthrough; its value to real users remains unmeasured. See [validation](docs/PUBLIC-VALIDATION.md).
 
 ## Download and start
 
-**[Download the portable skill ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.1/compound-intelligence-v0.3.1-skill.zip)** · [All release assets and checksums](https://github.com/gofarrrr/compound-intelligence/releases/tag/v0.3.1)
+**[Download the portable skill ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.2/compound-intelligence-v0.3.2-skill.zip)** · [All release assets and checksums](https://github.com/gofarrrr/compound-intelligence/releases/tag/v0.3.2)
 
 You need [Codex CLI](https://developers.openai.com/codex/cli/) (installed and signed in) and Python 3.10+. Extract the ZIP, open a terminal in its `compound-intelligence` folder, then run:
 
@@ -61,7 +61,7 @@ The host selects the smallest useful material, normally one primary method and a
 ## Optional components
 
 - **TypeSafe/Jev:** advisory method shortlisting and draft checks. Use your own key and explicitly approve the outgoing case/draft. [Onboarding](skills/compound-intelligence/references/onboarding.md) explains hidden key entry, environment inheritance and optional live testing. These calls can incur usage; they are not required for coaching or manual continuity.
-- **HTML workspace:** a separate [presentation component](presentation/README.md) renders already-decided advice beside practice and references. Try the [synthetic demo](presentation/examples/handoffs.html). It adds no advice, model calls or automatic learning and is outside the portable skill.
+- **HTML workspace:** a separate [presentation component](presentation/README.md) renders already-decided advice beside practice and references. Try the [synthetic demo](presentation/examples/handoffs.html). It adds no advice, model calls or automatic learning and is bundled with the portable skill as a separately invoked component.
 
 The active postflight contract is `ci.postflight.v2.1.0` with G adopted. H is unpromoted, the assertion cutoff stays strictly **> 0.25**, policy remains `ci.policy.v2.0.0`, and review permits at most one revision. These are advisory, uncalibrated policies, not authority to act on people. See [release notes](skills/compound-intelligence/references/release-notes.md) and [runtime details](skills/compound-intelligence/references/decision-runtime.md).
 

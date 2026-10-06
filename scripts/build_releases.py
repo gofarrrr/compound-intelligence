@@ -51,8 +51,12 @@ def files_under(source: Path, *, allowed: list[str] | None = None):
             relative = Path(name)
             if prohibited(relative):
                 raise ValueError(f'Prohibited public release path: {name}')
-            path = source / relative
-            if any(parent.is_symlink() for parent in [path, *(source / p for p in relative.parents)]):
+            # Bundle the separate renderer without maintaining a second source copy.
+            payload_source = ROOT if source == MAIN and relative.parts[0] == 'presentation' else source
+            if payload_source == ROOT and source == MAIN and name not in release_paths(ROOT):
+                raise ValueError(f'Undeclared presentation payload: {name}')
+            path = payload_source / relative
+            if any(parent.is_symlink() for parent in [path, *(payload_source / p for p in relative.parents)]):
                 raise ValueError(f'Refusing symlink in public path: {name}')
             if not path.is_file():
                 raise ValueError(f'Missing declared public file: {name}')

@@ -1,4 +1,4 @@
-# Architecture — Compound Intelligence 0.3.1
+# Architecture — Compound Intelligence 0.3.2
 
 ## Boundaries
 
@@ -65,7 +65,7 @@ The standalone standard-library helper checks explicit case/path/section grants,
 
 The separate `presentation/` component consumes an already-decided `ci.presentation.v1` packet after the host completes applicable review. Its Python standard-library renderer validates structure, escapes all supplied text and creates a private standalone HTML artifact. It does not import the runtime, select methods, generate coaching or call a provider.
 
-The default `workspace.html` keeps advice, the active task and the selected reference adjacent. The earlier `page.html` remains an alternate template. Notes export/import is a local file workflow; it does not approve a lesson or update skill memory. The full-project development component remains outside the portable skill. See the [presentation guide](presentation/README.md) and [development guide](docs/DEVELOPMENT.md).
+The default `workspace.html` keeps advice, the active task and the selected reference adjacent. The earlier `page.html` remains an alternate template. Notes export/import is a local file workflow; it does not approve a lesson or update skill memory. The authoritative component remains separate in the full project; its renderer and default template are bundled with the portable skill and invoked only after advice/review. See the [presentation guide](presentation/README.md) and [development guide](docs/DEVELOPMENT.md).
 
 ## Deliberate non-features
 

@@ -4,7 +4,7 @@
   "notice": "Explicit reviewed file lists. Unknown additions are excluded. Known secret/private/internal paths remain prohibited even when listed. Builds are not publication or license approval.",
   "public_classes": {
     "plugin": "Canonical skill, original examples/adapters, presentation, executable project/test/evaluation source, curated public guides and original October 2 synthetic technical evidence.",
-    "skill": "Reviewed self-contained canonical skill; no research, presentation, PM records or private snapshots."
+    "skill": "Self-contained canonical skill and separately invoked presentation renderer; no research, PM records or private snapshots."
   },
   "formats": {
     "plugin": [
@@ -167,7 +167,8 @@
       "tests/test_presentation.py",
       "tests/test_release.py",
       "tests/test_review_ablation.py",
-      "tests/test_review_diagnostics.py"
+      "tests/test_review_diagnostics.py",
+      "skills/compound-intelligence/references/workflows/presentation.md"
     ],
     "skill": [
       "LICENSE",
@@ -250,7 +251,10 @@
       "scripts/ci_runtime/state.py",
       "scripts/create_home.py",
       "scripts/install.py",
-      "scripts/launch_codex.py"
+      "scripts/launch_codex.py",
+      "presentation/render.py",
+      "presentation/workspace.html",
+      "references/workflows/presentation.md"
     ]
   }
 }

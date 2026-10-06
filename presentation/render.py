@@ -153,7 +153,7 @@ def render(packet, template_path=HERE / 'workspace.html'):
 
 def write_new(path, payload):
     path = path.expanduser().absolute()
-    skill = HERE.parent / 'skills' / 'compound-intelligence'
+    skill = HERE.parent if (HERE.parent/'SKILL.md').is_file() else HERE.parent / 'skills' / 'compound-intelligence'
     if path.suffix.lower() != '.html' or path.resolve().is_relative_to(skill.resolve()):
         raise ValueError('Output must be an HTML file outside the canonical skill')
     flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, 'O_NOFOLLOW', 0)

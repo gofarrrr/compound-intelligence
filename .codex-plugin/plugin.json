@@ -1,6 +1,6 @@
 {
   "name": "compound-intelligence",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Experimental leadership coaching with manual case continuity, source-grounded methods and optional TypeSafe/Jev assistance.",
   "skills": "./skills/",
   "interface": {

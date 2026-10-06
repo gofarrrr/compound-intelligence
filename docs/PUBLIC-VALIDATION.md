@@ -1,6 +1,6 @@
 # Public validation status
 
-Updated 2026-10-06. Package 0.3.1 is an experimental continuity/onboarding preview. Packaging the current workflow does not promote E/C/D as demonstrated advice improvements. Building it alone does not publish a release.
+Updated 2026-10-06. Package 0.3.2 is an experimental continuity/onboarding preview. Packaging the current workflow does not promote E/C/D as demonstrated advice improvements. Building it alone does not publish a release.
 
 ## Decision runtime
 
@@ -24,10 +24,14 @@ Implementation review approved the MVP after a section-order fix. A fictional wa
 
 ## Offline and packaging checks
 
-The complete suite contains **155 offline tests**, including 147 retained checks and eight new offline installer/launcher/version checks. The retained suite passed the earlier readiness audit; the 0.3.1 build records its own result. These check structure, typed contracts, receipts, provider-failure paths, finite revision, source preservation, presentation rendering and filesystem behavior. Continuity checks cover consent scope, stale reads, preservation of section order and truthful write status. Authored semantic fixtures illustrate transitions; they do not execute a generative coach or establish that hosts always follow the instructions.
+The complete suite contains **155 offline tests**, including 147 retained checks and eight new offline installer/launcher/version checks. The retained suite passed the earlier readiness audit; the 0.3.2 build records its own result. These check structure, typed contracts, receipts, provider-failure paths, finite revision, source preservation, presentation rendering and filesystem behavior. Continuity checks cover consent scope, stale reads, preservation of section order and truthful write status. Authored semantic fixtures illustrate transitions; they do not execute a generative coach or establish that hosts always follow the instructions.
 
 All 21 Webb source cards remain unchanged. Multi-book research and the mental-model inventory are internal editorial material, not additional deployed methods. Current Jev postflight receives the case, draft and actual registered Webb cards; it does not review arbitrary outside supporting sources.
 
 Public packaging uses a reviewed [file manifest](../scripts/public-release-files.json), checks local links in both formats and records member hashes. The renderer reproduces its synthetic demo; byte equality does not establish accessibility or every browser interaction. A fresh repository-local installation was recognized by Codex CLI 0.160.1 through native skills/list metadata, without any inference request. An actual hidden-terminal entry smoke with a synthetic key and fake child verified no input echo and child-only transfer. Launcher unit tests use synthetic keys and a mocked host; they establish child-environment transfer, no key in arguments/output, refused noninteractive entry, absent automatic sending consent and preservation of the parent environment. They do not establish provider connectivity or native-host compliance.
 
 The maintainer adopted [MIT](../LICENSE) for original project work on 2026-10-06, with third-party rights retained in [NOTICE](../NOTICE.md). See [distribution](DISTRIBUTION.md) for build versus publication and internal-handoff boundaries. The maintainer confirmed revocation of the potentially exposed old key on 2026-10-06; no key value or account credential was inspected. New exports remain independently scanned. No production accuracy rate, threshold calibration, human-validation claim or real-world coaching effectiveness is established.
+
+## 0.3.2 presentation integration
+
+The existing presentation component is bundled into the portable release from its authoritative root source, without another renderer implementation. The host offers a workspace at a useful plan handoff and invokes it when requested under actual file consent. Installed-renderer and release inventory checks passed within the 155-test suite. Requested Jev mode must offer eligible approved routing or explain why it stays local. This host instruction has not been measured as reliable compliance, token savings or effectiveness; no live provider call was performed. Decision contracts and policy are unchanged.

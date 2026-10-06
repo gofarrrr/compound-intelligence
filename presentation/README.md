@@ -1,6 +1,6 @@
 # Final-response presentation MVP
 
-This optional component turns an **already-decided coaching response** into a standalone local HTML workspace. It lives outside `skills/compound-intelligence/`, imports no skill/runtime code, calls no models and adds no discoverable skill. The current skill and portable package remain unchanged.
+This optional component turns an **already-decided coaching response** into a standalone local HTML workspace. It lives outside `skills/compound-intelligence/`, imports no skill/runtime code, calls no models and adds no discoverable skill. The renderer remains independent of coaching; the portable release now bundles its executable and default template.
 
 Open the [synthetic demo](examples/handoffs.html). Choose **Prepare**, **Practise** or **Reflect**. The next move and transferable principle stay beside the task. Click **Example**, **Evidence** or **Sources** to change the reserved reference panel while keeping your writing in place. Try exporting notes and loading that export. The demo is a source-informed illustration, not a live-reviewed result or effectiveness test.
 
@@ -32,7 +32,7 @@ An opt-in instruction for a host with access to this repository:
 
 > Use Compound Intelligence for the task. After completing its workflow, read presentation/README.md and render the final content using presentation/render.py. Keep its existing wording and unresolved limitations; include only examples and prompts already prepared. Return the HTML link plus the next move in text.
 
-This instruction requires actual filesystem/tool access. Installing the portable skill alone does not install this sibling component.
+This instruction requires actual filesystem/tool access. The portable release bundles this component under the installed skill’s presentation directory. Source checkouts retain this sibling directory.
 
 ## Render a new brief
 
@@ -73,7 +73,7 @@ An omitted practice or reflection section removes its view. A short clarificatio
 - Change [workspace.html](workspace.html) for typography, spacing, information hierarchy and interactions. It is developer-owned executable code, not case content. The previous document layout remains in [page.html](page.html), with the same new visual language; select it with `--template presentation/page.html` to compare the same content in the two layouts.
 - Keep the handoff fixed to compare presentation variants. Use `--template /path/to/variant.html` and a fresh output filename. The renderer rejects templates that omit supplied text. Preserve the always-visible notice and test the layout when creating variants; checking text inclusion alone does not establish visual accessibility.
 - Change the prepared handoff only when experimenting with content. That is a separate coaching/drafting change, with its own applicable review; it should not masquerade as a layout change.
-- Keep rendering outside the skill. The root plugin archive includes this development component; the portable skill archive excludes it. No release or version bump was made for this MVP.
+- Keep rendering outside the skill. The root plugin archive includes this development component; the portable skill archive includes render.py and workspace.html from this same source. No duplicate renderer source is maintained.
 
 The design uses Bone (`#f4f2f0`) canvas, white panels, Ink (`#0c0a08`) text and an Obsidian (`#1a1919`) next-move panel. Chartreuse (`#e4f222`) marks the active task and notes export; references use a monochrome selected state. One sans-serif family at weight 400 supplies all headings, labels and controls. The offline font stack prefers locally installed Inter, then Helvetica Neue/Helvetica/Arial; the proprietary reference font is not bundled or fetched. Hierarchy comes from size, surface contrast and spacing. Panels use hairline borders and 12/16px radii, fields 10px, buttons/tags 6px. There are no shadows, gradients or decorative animations; utility transitions respect reduced motion. Compact workspace spacing adapts the editorial guide to the no-backtracking task requirement rather than reproducing a marketing page.
 

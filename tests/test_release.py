@@ -64,6 +64,10 @@ class ReleaseTests(unittest.TestCase):
             self.assertEqual(sum('/cards/' in n and n.endswith('.md') for n in names), 21)
             self.assertEqual(sum(n.endswith('SKILL.md') for n in names), 1)
             self.assertTrue(any(n.endswith('assets/decision/state.schema.json') for n in names))
+            if source == builder.MAIN:
+                self.assertIn('presentation/render.py',names)
+                self.assertIn('presentation/workspace.html',names)
+                self.assertEqual(next(p for p,n in selected if n.as_posix()=='presentation/render.py'),ROOT/'presentation/render.py')
 
     def test_reproducible_archives_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:

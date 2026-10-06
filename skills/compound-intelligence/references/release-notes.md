@@ -1,5 +1,9 @@
 # Release 0.3.1 — 2026-10-06 — onboarding link fix
 
+## 0.3.2 — 2026-10-06
+
+Bundle the existing independent HTML workspace with portable installations; connect the presentation handoff and explain local selection when Jev was requested. No Jev contract, card, policy, threshold or revision-limit change. No token-saving or effectiveness claim.
+
 Corrects the Codex CLI install-guide link and missing-host message from 0.3.0. No decision or key-handling behavior changes. The current portable package is 0.3.1; 0.3.0 remains preserved as published history. See [onboarding](onboarding.md).
 
 # Release 0.3.0 — 2026-10-06 — experimental preview

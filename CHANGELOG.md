@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 — 2026-10-06
+
+Bundle the existing independent HTML workspace with portable installations; connect the presentation handoff and explain local selection when Jev was requested. No Jev contract, card, policy, threshold or revision-limit change. No token-saving or effectiveness claim.
+
 ## 0.3.1 — 2026-10-06 — onboarding link fix
 
 Corrects the Codex CLI installation guide URL in onboarding and the missing-host message. Published 0.3.0 assets remain unchanged. Installation, key handling, coaching, source cards, Jev contracts and policy are unchanged; package/helper metadata and current download links now identify 0.3.1.

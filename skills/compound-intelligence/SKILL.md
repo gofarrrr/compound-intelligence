@@ -25,7 +25,7 @@ Read [decision runtime](references/decision-runtime.md) before first use of the 
 
 For first-use setup, read [onboarding](references/onboarding.md): offer local coaching or TypeSafe assistance when the preference is unknown, without blocking useful help. If the user requests setup or expects Jev, check readiness in this session and guide them to hidden terminal entry or their host's secret mechanism. Never collect the key in chat or through agent tools. Key presence, verified API connectivity and permission to send a case are separate; report each accurately. API setup creates no learning home.
 
-For a directly requested source lesson, a tiny question, or a restricted case, proceed locally. No paid classifier call is necessary. For a substantive case with several plausible methods, the runtime can make the candidate selection and uncertainty visible.
+For a directly requested source lesson, a tiny question, or a restricted case, proceed locally. No paid classifier call is necessary. For a substantive case with several plausible methods, the runtime can make the candidate selection and uncertainty visible. When Jev assistance was explicitly requested, do not silently substitute local selection: for an eligible case, prepare the minimized packet and offer its approved preflight; otherwise briefly explain the local boundary (restricted data, human-led employment decision, explicit source lesson, trivial request, or unavailable setup). Key presence alone is neither consent nor a live call. Never score or rank employees through Jev.
 
 Run this local readiness check when needed:
 
@@ -93,6 +93,8 @@ python3 "$SKILL_DIR/scripts/ci.py" review \
 ```
 
 Receipts are bound to state, question/policy versions, source hashes, and the draft; changed state or a stale receipt requires rerouting. `advisory_pass` is not certification. `revise_once` allows one targeted revision; use `--attempt 1` for its review. A second failure means narrow the answer or request human review, not a loop until approval. An unavailable review falls back to the manual check and must be described as unavailable. The native host ultimately controls final output; this skill is not an enforced security boundary.
+
+When a substantive next move is ready, offer the [interactive workspace](references/workflows/presentation.md) when useful, or render it if already requested. Use the bundled, separate renderer after applicable review; do not create a replacement HTML design. File creation still needs an authorized destination.
 
 ## 6. Compound learning with consent
 

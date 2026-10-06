@@ -1,6 +1,6 @@
-# Compound Intelligence — portable 0.3.1 (experimental)
+# Compound Intelligence — portable 0.3.2 (experimental)
 
-Prepare a leadership move, try it, and return with what happened. One visible skill provides 21 preserved book-based methods, optional TypeSafe/Jev support and a manual case-return workflow. Start with [SKILL.md](SKILL.md). Keep this entire folder together; importing only the manifest loses the source cards and executable helpers. Version 0.3.1 packages the manual continuity MVP and first-use installation/Jev setup. It is an experimental preview, not a demonstrated advice-quality upgrade.
+Prepare a leadership move, try it, and return with what happened. One visible skill provides 21 preserved book-based methods, optional TypeSafe/Jev support and a manual case-return workflow. Start with [SKILL.md](SKILL.md). Keep this entire folder together; importing only the manifest loses the source cards and executable helpers. Version 0.3.2 packages the manual continuity MVP and first-use installation/Jev setup. It is an experimental preview, not a demonstrated advice-quality upgrade.
 
 This release uses `ci.postflight.v2.1.0`, the evaluated G assertion clarification. H remains unpromoted; thresholds and authority rules are unchanged. The [release notes](references/release-notes.md) record the maintainer decision, residual flags and limits of the synthetic/AI-review evidence.
 
@@ -59,3 +59,7 @@ This portable form has the same runtime and cards as the full project. The full 
 The core-versus-plain-host synthetic comparison produced 1 skill win, 1 plain-host win, 11 ties and 2 unusable judgments across 15 pairs. It did not demonstrate the required single-answer advantage. Continuity has passed implementation review and a fictional I/O walkthrough; no real-user benefit or coaching effectiveness is established. Feedback should tell us whether the return recalled the prior position, understood new information and made the next decision easier. Use fictional or minimized reproductions in public feedback; do not upload case records or keys.
 
 Primary references: [TypeSafe API](https://docs.typesafe.ai/api), [Codex skills](https://learn.chatgpt.com/docs/build-skills). Local Codex skill paths checked 2026-10-06; fresh local installation and Codex metadata discovery passed without inference. Live coaching and provider connectivity were not tested in the build. Original project work uses the [MIT license](LICENSE), adopted 2026-10-06; third-party rights retain their scope in [NOTICE](NOTICE.md).
+
+## Interactive workspace
+
+The portable ZIP includes the existing HTML renderer and chosen workspace design as a separate component. When a plan is ready, the host offers a workspace; ask for it directly if wanted. See the [presentation workflow](references/workflows/presentation.md). It displays already-decided advice, with task tabs, adjacent references and explicit notes export/import. Saving a case remains separate. A direct GitHub installation of only this subfolder omits the sibling component: use the portable release ZIP or the full repository installer for the complete experience.

@@ -1,4 +1,4 @@
-# Installation and migration — 0.3.1 experimental
+# Installation and migration — 0.3.2 experimental
 
 The ZIP contains the complete skill. Installation is explicit: run the supplied installer or copy the full folder manually. The installer and launcher are checked offline; live coaching/TypeSafe setup and native desktop installation are not performed during the build. Plugin packaging/authentication documentation was checked again on 2026-10-03; use your client's supported installation and secret-management mechanisms.
 
@@ -10,7 +10,7 @@ Both formats now expose **one** skill. The 21 chapter names and `ci-*` aliases a
 
 ## Recommended Codex installation
 
-[Download the portable ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.1/compound-intelligence-v0.3.1-skill.zip), extract it and run `python3 scripts/install.py` from the extracted `compound-intelligence` folder. From a cloned full project, use `python3 skills/compound-intelligence/scripts/install.py` instead. The installer copies the complete folder and refuses to overwrite existing or symlinked destinations. An interrupted copy is not success; preserve/reconcile a partial destination before retrying.
+[Download the portable ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.2/compound-intelligence-v0.3.2-skill.zip), extract it and run `python3 scripts/install.py` from the extracted `compound-intelligence` folder. From a cloned full project, use `python3 skills/compound-intelligence/scripts/install.py` instead. The installer copies the complete folder and refuses to overwrite existing or symlinked destinations. An interrupted copy is not success; preserve/reconcile a partial destination before retrying.
 
 Default destination: `$HOME/.agents/skills/compound-intelligence`. A custom repository-local destination is accepted with `--destination /your/repo/.agents/skills/compound-intelligence`. Cases and credentials do not belong in that installed folder.
 
@@ -96,7 +96,7 @@ The maintainer selected the local standalone skill and instruction-based onboard
 
 ### OSS release status
 
-The maintainer adopted [MIT](../LICENSE) for original project code and instructions on 2026-10-06. Both public formats include a license and [provenance notice](../NOTICE.md); this does not relicense the book or other third-party rights. Public distribution uses explicit file lists, not the whole development tree. Any previously shared active credential must be revoked before distribution. Package 0.3.1 is the experimental continuity/onboarding preview. The decision contracts and policy are unchanged; helper metadata now reports the matching package version.
+The maintainer adopted [MIT](../LICENSE) for original project code and instructions on 2026-10-06. Both public formats include a license and [provenance notice](../NOTICE.md); this does not relicense the book or other third-party rights. Public distribution uses explicit file lists, not the whole development tree. Any previously shared active credential must be revoked before distribution. Package 0.3.2 is the experimental continuity/onboarding preview. The decision contracts and policy are unchanged; helper metadata now reports the matching package version.
 
 ## Migrating from 0.1.0
 
@@ -107,3 +107,7 @@ Disable/uninstall the old plugin or back up the old standalone installation befo
 Old use: `$ci-feedback`. New use: `$compound-intelligence` followed by “use Factual Feedback” or “use ci-feedback.” Old use: `$ci-rehearse`. New use: `$compound-intelligence` followed by “rehearse this conversation.” All techniques remain available; the change is discovery granularity.
 
 The new runtime never rewrites installed source cards. It also does not convert previous reflections into classifier training data or assume they are calibrated labels. Existing user-approved lessons retain their original scope and caveats.
+
+## Presentation in 0.3.2
+
+Use the portable release ZIP or the full repository’s installer to install the complete experience. Both include the same separate renderer and workspace template. Installing only the GitHub skill subfolder through a generic downloader omits the sibling presentation source. For an existing install, preserve it outside skill discovery before installing the new complete package; the installer never overwrites it. Personal case files belong outside the installation.

@@ -31,7 +31,7 @@ def launch(*, jev=False, environment=None):
             if not key.strip():
                 raise ValueError('No key supplied. Use --local to start without Jev.')
             env['TYPESAFE_API_KEY'] = key.strip()
-        mode = 'Use Jev-assisted coaching when useful. Check doctor in the actual tool environment first. Ask before any TypeSafe call; a key is not sending permission.'
+        mode = 'Use Jev-assisted selection for eligible substantive cases after approval. If staying local, explain the reason; do not silently skip requested Jev. Check doctor in the actual tool environment first. Ask before any TypeSafe call; a key is not sending permission.'
         print('Key available to the new Codex process; connection remains unverified. No key file was written. Approve each outgoing request separately.')
     else:
         env.pop('TYPESAFE_API_KEY',None)

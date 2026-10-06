@@ -1,10 +1,10 @@
-# Quick start — 0.3.1 experimental preview
+# Quick start — 0.3.2 experimental preview
 
-Version 0.3.1 includes manual case continuity and installation/Jev setup helpers. Start with local coaching and manual return. TypeSafe/Jev is optional. No personal key or additional Python libraries are needed for the local path; executable helpers require Python 3.10+.
+Version 0.3.2 includes manual case continuity and installation/Jev setup helpers. Start with local coaching and manual return. TypeSafe/Jev is optional. No personal key or additional Python libraries are needed for the local path; executable helpers require Python 3.10+.
 
 ## 1. Install the complete skill
 
-[Download the portable ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.1/compound-intelligence-v0.3.1-skill.zip), extract it, and open a terminal in its `compound-intelligence` folder:
+[Download the portable ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.2/compound-intelligence-v0.3.2-skill.zip), extract it, and open a terminal in its `compound-intelligence` folder:
 
 ```bash
 python3 scripts/install.py
