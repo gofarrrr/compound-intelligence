@@ -1,3 +1,7 @@
+# Release 0.3.1 — 2026-10-06 — onboarding link fix
+
+Corrects the Codex CLI install-guide link and missing-host message from 0.3.0. No decision or key-handling behavior changes. The current portable package is 0.3.1; 0.3.0 remains preserved as published history. See [onboarding](onboarding.md).
+
 # Release 0.3.0 — 2026-10-06 — experimental preview
 
 Adds a complete-folder installer, user-run Codex launcher and manual case return. Setup accepts your TypeSafe key only through your own process environment or a hidden terminal prompt, not chat. Installation refuses to overwrite an existing copy. The launcher starts a new Codex process, writes no key file and makes no TypeSafe call itself. A key is separate from provider consent; live connection testing and case/draft transfer remain explicitly approved. See [onboarding](onboarding.md).

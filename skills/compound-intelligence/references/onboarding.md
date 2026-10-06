@@ -11,7 +11,7 @@ If your preference is already clear, use it. Otherwise offer these choices once 
 
 ## Recommended: launch Codex with Jev
 
-Install the full skill first, using `python3 scripts/install.py` from the extracted portable folder. The installer refuses to overwrite an existing copy. Codex CLI must be installed, on PATH and signed in; see the [Codex CLI guide](https://learn.chatgpt.com/docs/codex-cli). Helpers require Python 3.10+; no TypeSafe SDK is needed.
+Install the full skill first, using `python3 scripts/install.py` from the extracted portable folder. The installer refuses to overwrite an existing copy. Codex CLI must be installed, on PATH and signed in; see the [Codex CLI guide](https://developers.openai.com/codex/cli/). Helpers require Python 3.10+; no TypeSafe SDK is needed.
 
 1. Create your own key in the [TypeSafe dashboard](https://console.typesafe.ai/). API usage is charged to your account; check its available usage before testing. The [official quick start](https://docs.typesafe.ai/introduction/quickstart) explains keys and bearer authentication.
 2. In your own interactive terminal, run:

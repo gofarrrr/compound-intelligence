@@ -1,6 +1,6 @@
 # Public validation status
 
-Updated 2026-10-06. Package 0.3.0 is an experimental continuity/onboarding preview. Packaging the current workflow does not promote E/C/D as demonstrated advice improvements. Building it alone does not publish a release.
+Updated 2026-10-06. Package 0.3.1 is an experimental continuity/onboarding preview. Packaging the current workflow does not promote E/C/D as demonstrated advice improvements. Building it alone does not publish a release.
 
 ## Decision runtime
 
@@ -24,7 +24,7 @@ Implementation review approved the MVP after a section-order fix. A fictional wa
 
 ## Offline and packaging checks
 
-The complete suite contains **155 offline tests**, including 147 retained checks and eight new offline installer/launcher/version checks. The retained suite passed the earlier readiness audit; the 0.3.0 build records its own result. These check structure, typed contracts, receipts, provider-failure paths, finite revision, source preservation, presentation rendering and filesystem behavior. Continuity checks cover consent scope, stale reads, preservation of section order and truthful write status. Authored semantic fixtures illustrate transitions; they do not execute a generative coach or establish that hosts always follow the instructions.
+The complete suite contains **155 offline tests**, including 147 retained checks and eight new offline installer/launcher/version checks. The retained suite passed the earlier readiness audit; the 0.3.1 build records its own result. These check structure, typed contracts, receipts, provider-failure paths, finite revision, source preservation, presentation rendering and filesystem behavior. Continuity checks cover consent scope, stale reads, preservation of section order and truthful write status. Authored semantic fixtures illustrate transitions; they do not execute a generative coach or establish that hosts always follow the instructions.
 
 All 21 Webb source cards remain unchanged. Multi-book research and the mental-model inventory are internal editorial material, not additional deployed methods. Current Jev postflight receives the case, draft and actual registered Webb cards; it does not review arbitrary outside supporting sources.
 

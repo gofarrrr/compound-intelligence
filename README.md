@@ -1,16 +1,16 @@
-# Compound Intelligence · 0.3.0 (experimental)
+# Compound Intelligence · 0.3.1 (experimental)
 
 **Prepare a leadership move. Try it. Return with what happened.**
 
 An experimental coaching skill for Codex, grounded in 21 methods from Caroline Webb's *Leadership Intelligence*. It helps you work through one situation, understand why a move fits, and revisit the plan when reality brings new information.
 
-Version **0.3.0** packages manual case continuity and first-use installation/Jev onboarding. It is a preview for trying the coaching workflow, not a demonstrated upgrade in advice quality. Our small synthetic comparison did **not** establish that the core skill gives better single answers than the same strong model without it. Continuity has passed implementation checks and a fictional walkthrough; its value to real users remains unmeasured. See [validation](docs/PUBLIC-VALIDATION.md).
+Version **0.3.1** packages manual case continuity and first-use installation/Jev onboarding. It is a preview for trying the coaching workflow, not a demonstrated upgrade in advice quality. Our small synthetic comparison did **not** establish that the core skill gives better single answers than the same strong model without it. Continuity has passed implementation checks and a fictional walkthrough; its value to real users remains unmeasured. See [validation](docs/PUBLIC-VALIDATION.md).
 
 ## Download and start
 
-**[Download the portable skill ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.0/compound-intelligence-v0.3.0-skill.zip)** · [All release assets and checksums](https://github.com/gofarrrr/compound-intelligence/releases/tag/v0.3.0)
+**[Download the portable skill ZIP](https://github.com/gofarrrr/compound-intelligence/releases/download/v0.3.1/compound-intelligence-v0.3.1-skill.zip)** · [All release assets and checksums](https://github.com/gofarrrr/compound-intelligence/releases/tag/v0.3.1)
 
-You need Codex CLI (installed and signed in) and Python 3.10+. Extract the ZIP, open a terminal in its `compound-intelligence` folder, then run:
+You need [Codex CLI](https://developers.openai.com/codex/cli/) (installed and signed in) and Python 3.10+. Extract the ZIP, open a terminal in its `compound-intelligence` folder, then run:
 
 ```bash
 python3 scripts/install.py

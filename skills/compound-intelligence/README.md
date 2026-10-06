@@ -1,6 +1,6 @@
-# Compound Intelligence — portable 0.3.0 (experimental)
+# Compound Intelligence — portable 0.3.1 (experimental)
 
-Prepare a leadership move, try it, and return with what happened. One visible skill provides 21 preserved book-based methods, optional TypeSafe/Jev support and a manual case-return workflow. Start with [SKILL.md](SKILL.md). Keep this entire folder together; importing only the manifest loses the source cards and executable helpers. Version 0.3.0 packages the manual continuity MVP and first-use installation/Jev setup. It is an experimental preview, not a demonstrated advice-quality upgrade.
+Prepare a leadership move, try it, and return with what happened. One visible skill provides 21 preserved book-based methods, optional TypeSafe/Jev support and a manual case-return workflow. Start with [SKILL.md](SKILL.md). Keep this entire folder together; importing only the manifest loses the source cards and executable helpers. Version 0.3.1 packages the manual continuity MVP and first-use installation/Jev setup. It is an experimental preview, not a demonstrated advice-quality upgrade.
 
 This release uses `ci.postflight.v2.1.0`, the evaluated G assertion clarification. H remains unpromoted; thresholds and authority rules are unchanged. The [release notes](references/release-notes.md) record the maintainer decision, residual flags and limits of the synthetic/AI-review evidence.
 

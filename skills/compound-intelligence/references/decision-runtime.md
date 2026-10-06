@@ -1,4 +1,4 @@
-# Decision runtime — package 0.3.0
+# Decision runtime — package 0.3.1
 
 This is implementation design, not a Caroline Webb framework. The canonical runtime is [ci.py](../scripts/ci.py); all referenced files are inside this portable skill.
 

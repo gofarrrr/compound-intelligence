@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 — 2026-10-06 — onboarding link fix
+
+Corrects the Codex CLI installation guide URL in onboarding and the missing-host message. Published 0.3.0 assets remain unchanged. Installation, key handling, coaching, source cards, Jev contracts and policy are unchanged; package/helper metadata and current download links now identify 0.3.1.
+
 ## 0.3.0 — 2026-10-06 — experimental preview
 
 Packages the current manual case-continuity workflow and original 21 preserved Webb cards for public trials. Adds a no-overwrite whole-folder installer and a user-run Codex launcher with hidden TypeSafe key entry. The key remains in the new process environment, outside prompts/arguments/key files. Each launched session starts without standing TypeSafe consent; connection testing and case transfers remain separately approved. No provider call runs during installation or launch itself.

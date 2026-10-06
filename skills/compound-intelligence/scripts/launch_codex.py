@@ -18,7 +18,7 @@ def launch(*, jev=False, environment=None):
     env = dict(os.environ if environment is None else environment)
     host = shutil.which('codex',path=env.get('PATH'))
     if not host:
-        raise ValueError('Install and sign in to Codex CLI first: https://learn.chatgpt.com/docs/codex-cli')
+        raise ValueError('Install and sign in to Codex CLI first: https://developers.openai.com/codex/cli/')
     # A new launcher session grants no standing permission to send cases.
     env.pop('CI_ALLOW_TYPESAFE',None)
     if jev:
