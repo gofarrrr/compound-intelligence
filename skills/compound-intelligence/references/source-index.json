@@ -1,0 +1,223 @@
+{
+  "book": {
+    "author": "Caroline Webb",
+    "title": "Leadership Intelligence: Science-Backed Strategies for Mastering 21 Everyday Management Challenges",
+    "publisher": "Crown Currency",
+    "copyright_year": 2026,
+    "epub_isbn": "9798217087976",
+    "edition": "First edition",
+    "source_type": "User-supplied EPUB"
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "How to Better Understand a Complex Situation",
+      "pillar": "Deliberate Wisdom",
+      "framework": "360-Degree Vision",
+      "printed_pages": "15–29",
+      "primary_epub_spine_path": "OEBPS/xhtml/012_c002_Chapter_1_How_to_Bet.xhtml",
+      "card": "cards/01-understand.md",
+      "skill": "ci-understand"
+    },
+    {
+      "chapter": 2,
+      "title": "How to Make Time for Your Top Priorities",
+      "pillar": "Deliberate Wisdom",
+      "framework": "Yes-Grow-No Rule",
+      "printed_pages": "30–41",
+      "primary_epub_spine_path": "OEBPS/xhtml/013_c003_Chapter_2_How_to_Mak.xhtml",
+      "card": "cards/02-prioritize.md",
+      "skill": "ci-prioritize"
+    },
+    {
+      "chapter": 3,
+      "title": "How to Come Up with Fresh Ideas and Solutions",
+      "pillar": "Deliberate Wisdom",
+      "framework": "FUSE — Focus, Unpack, Shift, Energize",
+      "printed_pages": "42–57",
+      "primary_epub_spine_path": "OEBPS/xhtml/014_c004_Chapter_3_How_to_Com.xhtml",
+      "card": "cards/03-ideate.md",
+      "skill": "ci-ideate"
+    },
+    {
+      "chapter": 4,
+      "title": "How to Make an Important Decision",
+      "pillar": "Deliberate Wisdom",
+      "framework": "ACORN — Aim, Criteria, Options, Rating, Next Steps",
+      "printed_pages": "58–75",
+      "primary_epub_spine_path": "OEBPS/xhtml/016_c005_Chapter_4_How_to_Mak.xhtml",
+      "card": "cards/04-decide.md",
+      "skill": "ci-decide"
+    },
+    {
+      "chapter": 5,
+      "title": "How to Mentally Prepare for a Key Meeting",
+      "pillar": "Deliberate Wisdom",
+      "framework": "Triple-A Checklist — Aim, Assumptions, Attitude",
+      "printed_pages": "76–84",
+      "primary_epub_spine_path": "OEBPS/xhtml/018_c006_Chapter_5_How_to_Men.xhtml",
+      "card": "cards/05-prepare.md",
+      "skill": "ci-prepare"
+    },
+    {
+      "chapter": 6,
+      "title": "How to Handle a Disagreement Well",
+      "pillar": "Deliberate Wisdom",
+      "framework": "Common Ground Technique",
+      "printed_pages": "85–98",
+      "primary_epub_spine_path": "OEBPS/xhtml/019_c007_Chapter_6_How_to_Han.xhtml",
+      "card": "cards/06-disagree.md",
+      "skill": "ci-disagree"
+    },
+    {
+      "chapter": 7,
+      "title": "How to Lead Intelligent Team Discussion",
+      "pillar": "Deliberate Wisdom",
+      "framework": "3 Fs of Team Wisdom — Focused, Frank, Flexible",
+      "printed_pages": "99–113",
+      "primary_epub_spine_path": "OEBPS/xhtml/020_c008_Chapter_7_How_to_Lea.xhtml",
+      "card": "cards/07-discuss.md",
+      "skill": "ci-discuss"
+    },
+    {
+      "chapter": 8,
+      "title": "How to Get People Aligned on a Goal",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "Pillars of Possibility — Purpose, Path, People, Progress",
+      "printed_pages": "121–135",
+      "primary_epub_spine_path": "OEBPS/xhtml/023_c010_Chapter_8_How_to_Get.xhtml",
+      "card": "cards/08-align.md",
+      "skill": "ci-align"
+    },
+    {
+      "chapter": 9,
+      "title": "How to Change the Way People Work",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "CASE — Clear, Appealing, Social, Easy",
+      "printed_pages": "136–152",
+      "primary_epub_spine_path": "OEBPS/xhtml/024_c011_Chapter_9_How_to_Cha.xhtml",
+      "card": "cards/09-change.md",
+      "skill": "ci-change"
+    },
+    {
+      "chapter": 10,
+      "title": "How to Communicate and Be Heard",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "Four Frequencies — Personal, Team, Leader, Message",
+      "printed_pages": "153–166",
+      "primary_epub_spine_path": "OEBPS/xhtml/026_c012_Chapter_10_How_to_Co.xhtml",
+      "card": "cards/10-communicate.md",
+      "skill": "ci-communicate"
+    },
+    {
+      "chapter": 11,
+      "title": "How to Delegate for High Performance",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "Fix-Flex Approach — What, How, When",
+      "printed_pages": "167–179",
+      "primary_epub_spine_path": "OEBPS/xhtml/027_c013_Chapter_11_How_to_De.xhtml",
+      "card": "cards/11-delegate.md",
+      "skill": "ci-delegate"
+    },
+    {
+      "chapter": 12,
+      "title": "How to Give Feedback That Drives Action",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "Factual Feedback",
+      "printed_pages": "180–193",
+      "primary_epub_spine_path": "OEBPS/xhtml/029_c014_Chapter_12_How_to_Gi.xhtml",
+      "card": "cards/12-feedback.md",
+      "skill": "ci-feedback"
+    },
+    {
+      "chapter": 13,
+      "title": "How to Develop a Colleague’s Capabilities",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "GUIDE — Goal, Understanding, Ideas, Deepen, Enable",
+      "printed_pages": "194–211",
+      "primary_epub_spine_path": "OEBPS/xhtml/030_c015_Chapter_13_How_to_De.xhtml",
+      "card": "cards/13-develop.md",
+      "skill": "ci-develop"
+    },
+    {
+      "chapter": 14,
+      "title": "How to Strengthen Team Collaboration",
+      "pillar": "Intrinsic Inspiration",
+      "framework": "4 Hs of Team Inspiration — Handshakes, Heroes, Humans, Habits",
+      "printed_pages": "212–224",
+      "primary_epub_spine_path": "OEBPS/xhtml/032_c016_Chapter_14_How_to_St.xhtml",
+      "card": "cards/14-collaborate.md",
+      "skill": "ci-collaborate"
+    },
+    {
+      "chapter": 15,
+      "title": "How to Stay Steady and Energized Under Pressure",
+      "pillar": "Reasoned Resilience",
+      "framework": "Five Resets — Recenter, Reframe, Reward, Recharge, Reflect",
+      "printed_pages": "231–248",
+      "primary_epub_spine_path": "OEBPS/xhtml/035_c018_Chapter_15_How_to_St.xhtml",
+      "card": "cards/15-reset.md",
+      "skill": "ci-reset"
+    },
+    {
+      "chapter": 16,
+      "title": "How to Lead Through Uncertainty and Upheaval",
+      "pillar": "Reasoned Resilience",
+      "framework": "Know-Be-Do",
+      "printed_pages": "249–260",
+      "primary_epub_spine_path": "OEBPS/xhtml/036_c019_Chapter_16_How_to_Le.xhtml",
+      "card": "cards/16-uncertainty.md",
+      "skill": "ci-uncertainty"
+    },
+    {
+      "chapter": 17,
+      "title": "How to Improve a Difficult Stakeholder Relationship",
+      "pillar": "Reasoned Resilience",
+      "framework": "Bridge Model",
+      "printed_pages": "261–273",
+      "primary_epub_spine_path": "OEBPS/xhtml/038_c020_Chapter_17_How_to_Im.xhtml",
+      "card": "cards/17-stakeholder.md",
+      "skill": "ci-stakeholder"
+    },
+    {
+      "chapter": 18,
+      "title": "How to Help a Colleague Who’s Struggling",
+      "pillar": "Reasoned Resilience",
+      "framework": "CALM — Check, Ask, Listen, Make things Manageable",
+      "printed_pages": "274–287",
+      "primary_epub_spine_path": "OEBPS/xhtml/039_c021_Chapter_18_How_to_He.xhtml",
+      "card": "cards/18-support.md",
+      "skill": "ci-support"
+    },
+    {
+      "chapter": 19,
+      "title": "How to Respond to Failures and Mistakes",
+      "pillar": "Reasoned Resilience",
+      "framework": "Voyage of Discovery",
+      "printed_pages": "288–302",
+      "primary_epub_spine_path": "OEBPS/xhtml/040_c022_Chapter_19_How_to_Re.xhtml",
+      "card": "cards/19-recover.md",
+      "skill": "ci-recover"
+    },
+    {
+      "chapter": 20,
+      "title": "How to Handle Exits and Layoffs Fairly",
+      "pillar": "Reasoned Resilience",
+      "framework": "Compassionate Clarity",
+      "printed_pages": "303–318",
+      "primary_epub_spine_path": "OEBPS/xhtml/041_c023_Chapter_20_How_to_Ha.xhtml",
+      "card": "cards/20-exits.md",
+      "skill": "ci-exits"
+    },
+    {
+      "chapter": 21,
+      "title": "How to Build Healthy Resilience in Your Team",
+      "pillar": "Reasoned Resilience",
+      "framework": "5 Cs of Team Resilience — Conversation, Calendar, Calm, Cause, Capacity",
+      "printed_pages": "319–331",
+      "primary_epub_spine_path": "OEBPS/xhtml/042_c024_Chapter_21_How_to_Bu.xhtml",
+      "card": "cards/21-team-resilience.md",
+      "skill": "ci-team-resilience"
+    }
+  ]
+}

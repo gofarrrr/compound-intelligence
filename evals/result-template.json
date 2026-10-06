@@ -1,0 +1,15 @@
+{
+  "status": "not_run",
+  "case_id": null,
+  "package_version": "0.1.0",
+  "host": null,
+  "model": null,
+  "date": null,
+  "capabilities": [],
+  "response_path": null,
+  "actual_tool_actions": [],
+  "dimension_scores": {},
+  "hard_failure": null,
+  "evidence": [],
+  "notes": "Template only. No live behavioral result has been recorded."
+}

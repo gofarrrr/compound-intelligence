@@ -1,0 +1,31 @@
+{
+  "schema_version": "ci.presentation.v1",
+  "kind": "advice",
+  "title": "Prepare a factual conversation.",
+  "goal": "Understand what happened and agree on a workable next handoff.",
+  "notice": "Synthetic example. The cause is unknown; the proposed opening invites the colleague's account. This demonstration has not received a live Jev review.",
+  "next_move": "Open with the reported event, then invite their perspective:\n\n\"Two agreed handoffs were missed. What happened from your perspective, and what would make the next handoff workable?\"\n\nListen before choosing a cause. Then discuss a practical next agreement with the people involved.",
+  "why": "Webb's Factual Feedback, Chapter 12, fits a conversation about a specific reported event. It separates observation from character judgment and invites the colleague's perspective before deciding why it happened.",
+  "principle": "An observation describes the event; an interpretation explains it. Keep the two separate, and ask a genuine question when the explanation is still unknown.",
+  "facts": [
+    "The user reports two missed agreed handoffs.",
+    "The user reports that the receiving team postponed testing."
+  ],
+  "unknowns": [
+    "The colleague's account of what happened.",
+    "The cause of the missed handoffs and the connection, if any, to postponed testing."
+  ],
+  "sources": [
+    "Caroline Webb, Leadership Intelligence, Chapter 12, printed pp. 180–193: Factual Feedback.",
+    "Selected project card: references/cards/12-feedback.md. The example and practice prompts are original implementation adaptations, not book quotations."
+  ],
+  "practice": {
+    "prompt": "Write your own opening. Keep the reported event separate from any assumed motive, and leave room for an account you have not anticipated.",
+    "observe": "Can you point to the event without adding a cause? Does your question allow the colleague to offer a different account?",
+    "example": "\"I want to understand the two missed handoffs and agree on the next one. What happened from your perspective?\"\n\nThis example states the aim, names the reported event and asks for an account. It does not establish a motive or promise an outcome."
+  },
+  "reflection": {
+    "prompt": "If you have tried the conversation, describe what you actually said and what you heard or observed. Keep your explanation of the result separate from the result itself. If it has not happened, leave this as a future reflection.",
+    "adjustment_prompt": "What would you keep or change in your next opening, and what observation would help you decide whether that adjustment was useful? Treat any lesson from this one attempt as provisional."
+  }
+}

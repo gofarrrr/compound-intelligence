@@ -1,0 +1,134 @@
+{
+  "kind": "focused_independent_review_verification",
+  "date": "2026-10-02",
+  "packet_sha256": "b6fb023ecb6270c5afcfbe96256d33ea2c6ae45b3fed2acf618dfe21b407326a",
+  "mapping_sha256": "1001144f0ac4899e4b9ea541aa4dd09a7f92c39d1809b2a0bf563fc6ec277282",
+  "original_files": {
+    "independent-review-summary.json": {
+      "sha256": "26385be5af540788e9d6d2e9ed78e91700d06ce000243b7fcb7d655b032a31b8",
+      "bytes": 7185
+    },
+    "independent-review-completed.md": {
+      "sha256": "57eca9b4752d385d1b2c1b6275a13402aafc2ec6d2d8973c49f83a9a9bc812a0",
+      "bytes": 41470
+    }
+  },
+  "original_archive_directory": "/Users/marcin/Desktop/compound-intelligence-focused-review-2026-10-02/received/gemini-2026-10-02",
+  "reviewer": {
+    "kind": "AI",
+    "identifier": "Gemini 3.8 Flash",
+    "model_identity_as_reported": "Gemini 3.8 Flash",
+    "review_date": "2026-10-02",
+    "prior_draft_exposure": "no",
+    "prior_scores_labels_or_findings_exposure": "no",
+    "exposure_details": "None; first exposure in this conversation.",
+    "outside_sources_used": "no",
+    "outside_sources_details": "None; evaluated independently using only supplied case evidence and source cards.",
+    "consulted_another_reviewer": "no"
+  },
+  "reviewer_kind_normalized": "ai",
+  "identity_or_blindness_independently_verified": false,
+  "independent_human_validation": false,
+  "checks": {
+    "duplicate_saved_files_identical": true,
+    "return_template_structure_complete": true,
+    "all_aliases_bound_once": true,
+    "case_evidence_drafts_and_source_cards_byte_preserved": true,
+    "markdown_json_labels_and_sentence_ids_agree": true,
+    "all_21_registry_card_hashes_verified": true
+  },
+  "labels": [
+    {
+      "case_id": "bc-005",
+      "alias": "C01",
+      "unsupported_assertion": {
+        "present": "no",
+        "sentence_ids": []
+      },
+      "framework_burden": {
+        "applicable": "yes",
+        "level": 0,
+        "sentence_ids": []
+      }
+    },
+    {
+      "case_id": "hc-004",
+      "alias": "C02",
+      "unsupported_assertion": {
+        "present": "no",
+        "sentence_ids": []
+      },
+      "framework_burden": {
+        "applicable": "yes",
+        "level": 2,
+        "sentence_ids": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      }
+    },
+    {
+      "case_id": "hc-003",
+      "alias": "C03",
+      "unsupported_assertion": {
+        "present": "no",
+        "sentence_ids": []
+      },
+      "framework_burden": {
+        "applicable": "yes",
+        "level": 0,
+        "sentence_ids": []
+      }
+    },
+    {
+      "case_id": "hc-001",
+      "alias": "C04",
+      "unsupported_assertion": {
+        "present": "no",
+        "sentence_ids": []
+      },
+      "framework_burden": {
+        "applicable": "yes",
+        "level": 0,
+        "sentence_ids": []
+      }
+    },
+    {
+      "case_id": "hc-002",
+      "alias": "C05",
+      "unsupported_assertion": {
+        "present": "no",
+        "sentence_ids": []
+      },
+      "framework_burden": {
+        "applicable": "yes",
+        "level": 1,
+        "sentence_ids": [
+          4
+        ]
+      }
+    }
+  ],
+  "reviews_received": 1,
+  "production_question_version": "ci.postflight.v2.0.0",
+  "production_question_digest": "cfe7583e66ad259cc4fab55ed1da6394bbae2538532836b6b941d0fb7d475b09",
+  "policy_digest": "5fb4e7a81e47f49b1d08e74bf86e1204847081d50060211341e5f187f3e741b9",
+  "promotion_criteria_sha256": "09a531f72cc405ea3d56c0103618c7b61b26566e8fe143b09763b30818a9cbc4",
+  "unsupported_assertions_cutoff": 0.25,
+  "comparison": "strictly_greater_than",
+  "promotion_or_evidence_standard_modified": false,
+  "network_called": false,
+  "note": "Derived coordinator verification and mapped judgments. Complete reviewer rationales and both unmodified originals remain in the external archive; this file is not the original review return.",
+  "rationales_preserved_in_originals": true,
+  "verification_script_sha256": "f539f236e1c5935f2a6866dcefc14f691229c04a7924768a9e142a6890d28da6"
+}

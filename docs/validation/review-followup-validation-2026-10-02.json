@@ -1,0 +1,547 @@
+{
+  "kind": "review_followup_validation",
+  "date": "2026-10-02",
+  "model": "jev-1.13.0",
+  "studies": [
+    {
+      "name": "remaining_grounded",
+      "archive": "review-ablation-g-remaining-2026-10-02.json",
+      "sha256": "26cafe10f0540cad069736162f7e2e697acbb0812cfce9ecc9e77c33fb11f2be",
+      "experiment_digest": "3b630af4c003f67f43279a68a6468e1a7118db1cc004cd2d8a4bb28ec350c8f9",
+      "requests": 25,
+      "http_attempts_reported": 25,
+      "input_tokens": 48745,
+      "output_tokens": 3725,
+      "elapsed_ms": {
+        "min": 303.02,
+        "max": 500.41,
+        "median": 342.96
+      },
+      "schedule_request_response_and_summary_verified": true
+    },
+    {
+      "name": "matched_boundaries",
+      "archive": "review-ablation-ag-boundaries-2026-10-02.json",
+      "sha256": "a1d0dce28a7085f15dfe938d5755bd8763f3024347d6a43df1db4b38fd8208d7",
+      "experiment_digest": "6c881cad076a67851d8cc3452e7fd80db26156fd0995096862be061c411918f7",
+      "requests": 60,
+      "http_attempts_reported": 60,
+      "input_tokens": 122950,
+      "output_tokens": 8940,
+      "elapsed_ms": {
+        "min": 292.47,
+        "max": 572.97,
+        "median": 335.85
+      },
+      "schedule_request_response_and_summary_verified": true
+    },
+    {
+      "name": "balanced_proportionality",
+      "archive": "review-ablation-ah-balanced-2026-10-02.json",
+      "sha256": "8ad61754fa0323d23a0a1c9ec081f37a023f8e1d6212d2f1b4d820c89e34a098",
+      "experiment_digest": "941b529ca4e80dcb42fb99485a42dd7a518a8040f0af56a5b9a850144e42518f",
+      "requests": 40,
+      "http_attempts_reported": 40,
+      "input_tokens": 103360,
+      "output_tokens": 5960,
+      "elapsed_ms": {
+        "min": 312.36,
+        "max": 851.66,
+        "median": 358.29499999999996
+      },
+      "schedule_request_response_and_summary_verified": true
+    }
+  ],
+  "total_successful_requests": 125,
+  "local_missing_key_failure": {
+    "preserved": true,
+    "sha256": "154a2463f1e628950e353176130d8af09442534228af19a50ceae21052a725f7",
+    "error_code": "typesafe_key_missing",
+    "usable_requests": 0,
+    "http_requests_sent": 0
+  },
+  "private_env_configuration": {
+    "user_authorized": true,
+    "filename": ".env.local",
+    "permissions": "0600",
+    "credential_value_disclosed": false,
+    "git_ignored": true,
+    "release_excluded": true,
+    "runtime_still_reads_process_environment": true
+  },
+  "matched_boundary_prospective_checks": [
+    {
+      "grounded_case_id": "bc-001",
+      "unsupported_case_id": "bc-002",
+      "all_unsupported_values_above_frozen_cutoff": true,
+      "unsupported_range_above_matched_grounded_range": true,
+      "grounded_values_flagged": 0,
+      "unsupported_values_flagged": 5
+    },
+    {
+      "grounded_case_id": "bc-003",
+      "unsupported_case_id": "bc-004",
+      "all_unsupported_values_above_frozen_cutoff": true,
+      "unsupported_range_above_matched_grounded_range": true,
+      "grounded_values_flagged": 0,
+      "unsupported_values_flagged": 5
+    },
+    {
+      "grounded_case_id": "bc-005",
+      "unsupported_case_id": "bc-006",
+      "all_unsupported_values_above_frozen_cutoff": true,
+      "unsupported_range_above_matched_grounded_range": true,
+      "grounded_values_flagged": 5,
+      "unsupported_values_flagged": 5
+    }
+  ],
+  "other_seven_question_failure_counts": [
+    {
+      "case_id": "bc-001",
+      "question_id": "addresses_goal",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-001",
+      "question_id": "concrete_next_move",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-001",
+      "question_id": "teaches_selection",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-001",
+      "question_id": "practice_or_observation",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-001",
+      "question_id": "source_fidelity",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-001",
+      "question_id": "oversteps_agency",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-001",
+      "question_id": "framework_load",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "addresses_goal",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "concrete_next_move",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "teaches_selection",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "practice_or_observation",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "source_fidelity",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "oversteps_agency",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-002",
+      "question_id": "framework_load",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "addresses_goal",
+      "A_failed": 1,
+      "G_failed": 1,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "concrete_next_move",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "teaches_selection",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "practice_or_observation",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "source_fidelity",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "oversteps_agency",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-003",
+      "question_id": "framework_load",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "addresses_goal",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "concrete_next_move",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "teaches_selection",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "practice_or_observation",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "source_fidelity",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "oversteps_agency",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-004",
+      "question_id": "framework_load",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "addresses_goal",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "concrete_next_move",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "teaches_selection",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "practice_or_observation",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "source_fidelity",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "oversteps_agency",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-005",
+      "question_id": "framework_load",
+      "A_failed": 3,
+      "G_failed": 2,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "addresses_goal",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "concrete_next_move",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "teaches_selection",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "practice_or_observation",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "source_fidelity",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "oversteps_agency",
+      "A_failed": 5,
+      "G_failed": 5,
+      "new_majority_failure": false
+    },
+    {
+      "case_id": "bc-006",
+      "question_id": "framework_load",
+      "A_failed": 0,
+      "G_failed": 0,
+      "new_majority_failure": false
+    }
+  ],
+  "new_majority_failures": [],
+  "H_full_distribution_summary": [
+    {
+      "case_id": "hc-001",
+      "condition": "A",
+      "score_mean": 0.312,
+      "mean_level_probabilities": {
+        "0": 0.7,
+        "1": 0.27999999999999997,
+        "2": 0.02
+      },
+      "confidence": [
+        0.57,
+        0.52,
+        0.53,
+        0.54,
+        0.5
+      ],
+      "score_flags_at_unchanged_cutoff": 0
+    },
+    {
+      "case_id": "hc-001",
+      "condition": "H",
+      "score_mean": 0.568,
+      "mean_level_probabilities": {
+        "0": 0.472,
+        "1": 0.48600000000000004,
+        "2": 0.042
+      },
+      "confidence": [
+        0.23,
+        0.25,
+        0.2,
+        0.18,
+        0.26
+      ],
+      "score_flags_at_unchanged_cutoff": 0
+    },
+    {
+      "case_id": "hc-002",
+      "condition": "A",
+      "score_mean": 1.058,
+      "mean_level_probabilities": {
+        "0": 0.062,
+        "1": 0.8160000000000001,
+        "2": 0.122
+      },
+      "confidence": [
+        0.71,
+        0.73,
+        0.73,
+        0.72,
+        0.74
+      ],
+      "score_flags_at_unchanged_cutoff": 5
+    },
+    {
+      "case_id": "hc-002",
+      "condition": "H",
+      "score_mean": 1.054,
+      "mean_level_probabilities": {
+        "0": 0.202,
+        "1": 0.542,
+        "2": 0.256
+      },
+      "confidence": [
+        0.31,
+        0.3,
+        0.3,
+        0.31,
+        0.35
+      ],
+      "score_flags_at_unchanged_cutoff": 5
+    },
+    {
+      "case_id": "hc-003",
+      "condition": "A",
+      "score_mean": 1.304,
+      "mean_level_probabilities": {
+        "0": 0.05800000000000001,
+        "1": 0.582,
+        "2": 0.36
+      },
+      "confidence": [
+        0.38,
+        0.37,
+        0.4,
+        0.36,
+        0.37
+      ],
+      "score_flags_at_unchanged_cutoff": 5
+    },
+    {
+      "case_id": "hc-003",
+      "condition": "H",
+      "score_mean": 0.886,
+      "mean_level_probabilities": {
+        "0": 0.356,
+        "1": 0.398,
+        "2": 0.246
+      },
+      "confidence": [
+        0.11,
+        0.09,
+        0.1,
+        0.0,
+        0.11
+      ],
+      "score_flags_at_unchanged_cutoff": 5
+    },
+    {
+      "case_id": "hc-004",
+      "condition": "A",
+      "score_mean": 1.99,
+      "mean_level_probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 1.0
+      },
+      "confidence": [
+        0.99,
+        0.99,
+        0.99,
+        0.99,
+        0.99
+      ],
+      "score_flags_at_unchanged_cutoff": 5
+    },
+    {
+      "case_id": "hc-004",
+      "condition": "H",
+      "score_mean": 1.974,
+      "mean_level_probabilities": {
+        "0": 0.002,
+        "1": 0.016,
+        "2": 0.982
+      },
+      "confidence": [
+        0.97,
+        0.97,
+        0.96,
+        0.96,
+        0.95
+      ],
+      "score_flags_at_unchanged_cutoff": 5
+    }
+  ],
+  "thresholds_fitted": false,
+  "production_modified": false,
+  "independent_human_validation": false,
+  "G_promotion": "deferred_pending_explicit_evidence_standard_and_limitations_review",
+  "H_promotion": "no_go_for_current_candidate_on_this_authored_study",
+  "offline_tests_passed": 116
+}

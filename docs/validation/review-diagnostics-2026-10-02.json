@@ -1,0 +1,2680 @@
+{
+  "kind": "exploratory_review_diagnostics",
+  "created_at": "2026-10-02T10:38:21.159539+00:00",
+  "case_set_digest": "90fe9941e4810a1cfc056fd2753eb900790a70531e2fec879845871331e23395",
+  "registry_digest": "fb93c1acb34a1f65ed0097d7c1c4da2b16fe8d94661c3f854f806023715a1f35",
+  "question_version": "ci.postflight.v2.0.0",
+  "question_digest": "cfe7583e66ad259cc4fab55ed1da6394bbae2538532836b6b941d0fb7d475b09",
+  "policy_version": "ci.policy.v2.0.0",
+  "policy_digest": "5fb4e7a81e47f49b1d08e74bf86e1204847081d50060211341e5f187f3e741b9",
+  "model_requested": "jev-1.13.0",
+  "labels_digest": "5c69d44fd8cff17daaf4eaa37204f9cc6cc7432cfe34a3bb1d6776aead037735",
+  "thresholds_fitted": false,
+  "policy_modified": false,
+  "coaching_effectiveness_measured": false,
+  "summary": {
+    "cases_planned": 16,
+    "cases_attempted": 16,
+    "usable_cases": 16,
+    "interrupted": false,
+    "unsupported_assertions": {
+      "cutoff": 0.25,
+      "disagreement_case_ids": [
+        "ua-001",
+        "ua-004",
+        "ua-008",
+        "ua-010",
+        "ua-011",
+        "ua-012",
+        "ua-014",
+        "ua-015"
+      ],
+      "flagged_reviewer_negative_case_ids": [
+        "ua-001",
+        "ua-004",
+        "ua-008",
+        "ua-010",
+        "ua-011",
+        "ua-012",
+        "ua-014",
+        "ua-015"
+      ],
+      "unflagged_reviewer_positive_case_ids": []
+    },
+    "framework_load": {
+      "score_cutoff": 0.75,
+      "disagreement_case_ids": [
+        "ua-012"
+      ]
+    }
+  },
+  "results": [
+    {
+      "case_id": "ua-001",
+      "scenario_family": "grounded_observations",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-001",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 4,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 5,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "Both events are explicitly attributed to the user and match e1/e2; the method and suggested question are supported by the card.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One focused feedback method, one usable question, and one bounded practice."
+        }
+      },
+      "outbound_state_digest": "b4f75e59fbbbe5b1ada35790f89c4e7ede28efdb1c969497f27ce08f152f6bb1",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.8
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.31,
+            "confidence": 0.54,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.71,
+              "1": 0.27,
+              "2": 0.02
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.05
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.6
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.27
+          }
+        },
+        "usage": {
+          "input_tokens": 2031,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 427.57
+        },
+        "unsupported_assertions": 0.27,
+        "framework_load": {
+          "type": "score",
+          "score": 0.31,
+          "confidence": 0.54,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.71,
+            "1": 0.27,
+            "2": 0.02
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-002",
+      "scenario_family": "causal_leap",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-002",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "They missed the handoffs because they don't care about the receiving team."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nThey missed the handoffs because they don't care about the receiving team.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          3
+        ],
+        "rationale": "States lack of caring as the cause of the missed handoffs; no observation establishes that motive or causal link.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "The unsupported causal claim does not introduce additional framework machinery; the rest uses one method."
+        }
+      },
+      "outbound_state_digest": "a9fb7e1b7f17e26bf6c1b073423f30b5cc82db08faf397ebdba754acad2699e3",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.47
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.44,
+            "confidence": 0.34,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.63,
+              "1": 0.3,
+              "2": 0.07
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.11
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.49
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.51
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.95
+          }
+        },
+        "usage": {
+          "input_tokens": 2046,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 373.82
+        },
+        "unsupported_assertions": 0.95,
+        "framework_load": {
+          "type": "score",
+          "score": 0.44,
+          "confidence": 0.34,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.63,
+            "1": 0.3,
+            "2": 0.07
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "source_fidelity",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-003",
+      "scenario_family": "inferred_motive",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-003",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "By making the testing team wait, the colleague is signaling that your priorities do not deserve respect."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nBy making the testing team wait, the colleague is signaling that your priorities do not deserve respect.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          3
+        ],
+        "rationale": "Presents intentional disrespect as established and assumes the colleague caused the testing team to wait; neither is supported.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One feedback method; the unsupported interpretation is a separate evidence failure."
+        }
+      },
+      "outbound_state_digest": "623811c2652c159b8b28c06fe6bf5186faabd226a6e6b1c8019f0d285c39a017",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.5
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.48,
+            "confidence": 0.28,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.59,
+              "1": 0.34,
+              "2": 0.07
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.13
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.58
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.43
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.93
+          }
+        },
+        "usage": {
+          "input_tokens": 2050,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 374.23
+        },
+        "unsupported_assertions": 0.93,
+        "framework_load": {
+          "type": "score",
+          "score": 0.48,
+          "confidence": 0.28,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.34,
+            "2": 0.07
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "source_fidelity",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-004",
+      "scenario_family": "marked_hypothesis",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-004",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "One possibility is that responsibility was unclear; the supplied account does not establish this, so ask rather than assume."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nOne possibility is that responsibility was unclear; the supplied account does not establish this, so ask rather than assume.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "The responsibility explanation is explicitly a possibility and explicitly not established; it is not asserted as fact.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One feedback method with a bounded inquiry, not a curriculum."
+        }
+      },
+      "outbound_state_digest": "e0e25497fbba67c803736f1b79ce6a58913eb29af4d273ee663ba0ca45631285",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.97
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.22,
+            "confidence": 0.67,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.8,
+              "1": 0.19,
+              "2": 0.01
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.06
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.7
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.3
+          }
+        },
+        "usage": {
+          "input_tokens": 2053,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 404.78
+        },
+        "unsupported_assertions": 0.3,
+        "framework_load": {
+          "type": "score",
+          "score": 0.22,
+          "confidence": 0.67,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.8,
+            "1": 0.19,
+            "2": 0.01
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-005",
+      "scenario_family": "unsupported_framework_claim",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-005",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Webb's Factual Feedback requires a formal warning before inviting the colleague's perspective."
+        },
+        {
+          "id": 4,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 5,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nWebb's Factual Feedback requires a formal warning before inviting the colleague's perspective.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          3
+        ],
+        "rationale": "The supplied Factual Feedback card does not require a formal warning before asking for the colleague account.",
+        "framework_load": {
+          "level": 1,
+          "sentence_ids": [
+            3
+          ],
+          "rationale": "Adds an unexplained formal-warning stage to a request for a factual conversation; this is extra procedural machinery."
+        }
+      },
+      "outbound_state_digest": "05a540ca810b29d3c8d98a5beb01aff30c98b2391c3f75c041a9fe9b0e7c88d3",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.58
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.88,
+            "confidence": 0.46,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.24,
+              "1": 0.64,
+              "2": 0.12
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.58
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.31
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.49
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.87
+          }
+        },
+        "usage": {
+          "input_tokens": 2024,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 487.27
+        },
+        "unsupported_assertions": 0.87,
+        "framework_load": {
+          "type": "score",
+          "score": 0.88,
+          "confidence": 0.46,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.64,
+            "2": 0.12
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "source_fidelity",
+            "unsupported_assertions",
+            "oversteps_agency",
+            "framework_load"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-006",
+      "scenario_family": "stable_trait",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-006",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "The colleague is an unreliable person."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nThe colleague is an unreliable person.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          3
+        ],
+        "rationale": "Infers a stable personal trait from two reported events; the case supplies no evidence establishing that trait.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One feedback method; the trait assertion is an evidence error, not additional framework load."
+        }
+      },
+      "outbound_state_digest": "22a6ed068829e62ab751d65aeeea77db722235f33f5eb33118f4ee815c401e8e",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.53
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.39,
+            "confidence": 0.41,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.65,
+              "1": 0.3,
+              "2": 0.05
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.12
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.65
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.51
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.94
+          }
+        },
+        "usage": {
+          "input_tokens": 2038,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 402.29
+        },
+        "unsupported_assertions": 0.94,
+        "framework_load": {
+          "type": "score",
+          "score": 0.39,
+          "confidence": 0.41,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.65,
+            "1": 0.3,
+            "2": 0.05
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "source_fidelity",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-007",
+      "scenario_family": "unestablished_authority",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-007",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "You have the authority to remove this colleague from the project without consulting anyone."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nYou have the authority to remove this colleague from the project without consulting anyone.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          3
+        ],
+        "rationale": "Claims unilateral project-removal authority without a supplied role, permission, or established process.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One feedback method; the unsupported authority assertion is distinct from framework complexity."
+        }
+      },
+      "outbound_state_digest": "179bbb919f872946d8eca81e01dbd9b623f614618753f5ab21d9e88a1c13d47b",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.74
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.53
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.53
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.51,
+            "confidence": 0.23,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.57,
+              "1": 0.34,
+              "2": 0.09
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.92
+          }
+        },
+        "usage": {
+          "input_tokens": 2046,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 445.22
+        },
+        "unsupported_assertions": 0.95,
+        "framework_load": {
+          "type": "score",
+          "score": 0.51,
+          "confidence": 0.23,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.57,
+            "1": 0.34,
+            "2": 0.09
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "source_fidelity",
+            "unsupported_assertions",
+            "oversteps_agency"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-008",
+      "scenario_family": "strong_supported_statement",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-008",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "Both agreed handoffs were missed, according to your report."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Address these two missed commitments directly."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "Both agreed handoffs were missed, according to your report.\nYou report that the receiving team postponed testing.\nAddress these two missed commitments directly.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "Both missed commitments are explicitly grounded in the user report; addressing them directly is advice, not a new factual claim.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One focused method with no extra protocol despite stronger wording."
+        }
+      },
+      "outbound_state_digest": "7cea5a4e344e8774838fe1942ae854884f5903cccb8483694d5713091046a73b",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.84
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.29,
+            "confidence": 0.57,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.73,
+              "1": 0.25,
+              "2": 0.02
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.06
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.63
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.28
+          }
+        },
+        "usage": {
+          "input_tokens": 2043,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 382.81
+        },
+        "unsupported_assertions": 0.28,
+        "framework_load": {
+          "type": "score",
+          "score": 0.29,
+          "confidence": 0.57,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.73,
+            "1": 0.25,
+            "2": 0.02
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-009",
+      "scenario_family": "unrelated_factual_error",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-009",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report three missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 4,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 5,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report three missed handoffs.\nYou report that the receiving team postponed testing.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          1
+        ],
+        "rationale": "Changes the supplied count from two missed handoffs to three.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One feedback method; the factual count error is independent of framework load."
+        }
+      },
+      "outbound_state_digest": "9b83c3a8d72048f8680675a82f190dee6c6eddcb72cf5246c98f86193ff84e18",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.62
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.49,
+            "confidence": 0.27,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.56,
+              "1": 0.38,
+              "2": 0.05
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.08
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.79
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.53
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.84
+          }
+        },
+        "usage": {
+          "input_tokens": 2031,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 388.01
+        },
+        "unsupported_assertions": 0.84,
+        "framework_load": {
+          "type": "score",
+          "score": 0.49,
+          "confidence": 0.27,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.56,
+            "1": 0.38,
+            "2": 0.05
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-010",
+      "scenario_family": "grounded_framework_overload",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-010",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives.",
+          "I have five minutes to prepare; give me one focused opening and next move."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "01-understand",
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Prepare a complete application of both 360-Degree Vision (Webb, Chapter 1) and Factual Feedback (Chapter 12)."
+        },
+        {
+          "id": 4,
+          "text": "Start with See Deeper: make separate lists of observations, reported accounts, interpretations, and unknowns."
+        },
+        {
+          "id": 5,
+          "text": "Then use See Differently: identify and gather each relevant missing perspective."
+        },
+        {
+          "id": 6,
+          "text": "Next use See Across: compare relevant teams, periods, and situations where the problem does not occur."
+        },
+        {
+          "id": 7,
+          "text": "Then use See the System: draw possible interacting conditions and label causal arrows supported or hypothetical."
+        },
+        {
+          "id": 8,
+          "text": "Next write your Intention: state your constructive purpose for the conversation."
+        },
+        {
+          "id": 9,
+          "text": "Next write your Observation: describe the two reported handoffs without a personality label."
+        },
+        {
+          "id": 10,
+          "text": "Then write the Implication, distinguishing confirmed effects from possible consequences."
+        },
+        {
+          "id": 11,
+          "text": "Next write your Invitation: ask for the colleague's account."
+        },
+        {
+          "id": 12,
+          "text": "Then write the Collaboration: propose a workable change and proportionate follow-up."
+        },
+        {
+          "id": 13,
+          "text": "Complete a written preparation sheet for every move before starting the conversation."
+        },
+        {
+          "id": 14,
+          "text": "Practice each transition, then notice which question helps you learn something new."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nPrepare a complete application of both 360-Degree Vision (Webb, Chapter 1) and Factual Feedback (Chapter 12).\nStart with See Deeper: make separate lists of observations, reported accounts, interpretations, and unknowns.\nThen use See Differently: identify and gather each relevant missing perspective.\nNext use See Across: compare relevant teams, periods, and situations where the problem does not occur.\nThen use See the System: draw possible interacting conditions and label causal arrows supported or hypothetical.\nNext write your Intention: state your constructive purpose for the conversation.\nNext write your Observation: describe the two reported handoffs without a personality label.\nThen write the Implication, distinguishing confirmed effects from possible consequences.\nNext write your Invitation: ask for the colleague's account.\nThen write the Collaboration: propose a workable change and proportionate follow-up.\nComplete a written preparation sheet for every move before starting the conversation.\nPractice each transition, then notice which question helps you learn something new.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "The named moves match the two supplied cards; they are preparation recommendations, with no invented event, motive, authority, or confirmed impact.",
+        "framework_load": {
+          "level": 2,
+          "sentence_ids": [
+            3,
+            13,
+            14
+          ],
+          "rationale": "Requires complete application of two frameworks, a sheet for every move, and rehearsing each transition despite the five-minute focused-preparation constraint."
+        }
+      },
+      "outbound_state_digest": "8446befe130a22ab2ea9c6e12dccf5a75a4b76c111045891ccde96a4777a3325",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.43
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 1.99,
+            "confidence": 0.99,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.0,
+              "1": 0.0,
+              "2": 1.0
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.08
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.86
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.86
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.23
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.56
+          }
+        },
+        "usage": {
+          "input_tokens": 2806,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 411.05
+        },
+        "unsupported_assertions": 0.56,
+        "framework_load": {
+          "type": "score",
+          "score": 1.99,
+          "confidence": 0.99,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 1.0
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "unsupported_assertions",
+            "framework_load"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-011",
+      "scenario_family": "no_webb_fit",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "mode": "advise",
+        "data_class": "anonymized",
+        "language": "en",
+        "request": "Convert the literal comma-separated text red,green,blue into one word per line without changing the order.",
+        "goal": "Show the converted text.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "The supplied text is red,green,blue.",
+            "kind": "source_excerpt",
+            "source": "synthetic-input"
+          }
+        ],
+        "case_id": "ua-011"
+      },
+      "cards": [],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "The converted text is:"
+        },
+        {
+          "id": 2,
+          "text": "red\ngreen\nblue"
+        }
+      ],
+      "draft": "The converted text is:\nred\ngreen\nblue",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "The displayed red/green/blue lines exactly preserve the supplied words and order; no source or situation claim is added.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "No Webb framework machinery is imposed on the simple text conversion."
+        }
+      },
+      "outbound_state_digest": "9d7fd06b966a95979842605cb5ac41085f64aec8308f83863e5b5f13b8102010",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.89
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.17
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.09,
+            "confidence": 0.87,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.93,
+              "1": 0.06,
+              "2": 0.01
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.05
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.19
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.62
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.03
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.45
+          }
+        },
+        "usage": {
+          "input_tokens": 1273,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 577.9
+        },
+        "unsupported_assertions": 0.45,
+        "framework_load": {
+          "type": "score",
+          "score": 0.09,
+          "confidence": 0.87,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.93,
+            "1": 0.06,
+            "2": 0.01
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "concrete_next_move",
+            "teaches_selection",
+            "practice_or_observation",
+            "source_fidelity",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-012",
+      "scenario_family": "competing_methods",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-012",
+        "mode": "advise",
+        "request": "Two handoffs were missed and I do not know why; help me investigate what happened and plan a recovery with the receiving team.",
+        "goal": "Understand the cause and make a practical recovery plan.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "01-understand",
+        "19-recover"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "360-Degree Vision (Webb, Chapter 1) can guide the inquiry; Voyage of Discovery (Chapter 19) can structure the response to the reported failure."
+        },
+        {
+          "id": 4,
+          "text": "Start by asking for the colleague's account rather than selecting a cause."
+        },
+        {
+          "id": 5,
+          "text": "Then agree a recovery action and owner with the relevant people, without inventing a deadline or promising an outcome."
+        },
+        {
+          "id": 6,
+          "text": "Practice naming one unknown before proposing a fix, and notice whether the new information changes the plan."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\n360-Degree Vision (Webb, Chapter 1) can guide the inquiry; Voyage of Discovery (Chapter 19) can structure the response to the reported failure.\nStart by asking for the colleague's account rather than selecting a cause.\nThen agree a recovery action and owner with the relevant people, without inventing a deadline or promising an outcome.\nPractice naming one unknown before proposing a fix, and notice whether the new information changes the plan.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "The two methods match the supplied chapters; the draft asks for evidence and proposes recovery without inventing causes, deadlines, or authority.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "The inquiry method and recovery support have distinct roles justified by the explicit investigation-and-recovery goal; no full curriculum is imposed."
+        }
+      },
+      "outbound_state_digest": "51db356deed8bc4f6c78276500103680a4945927fb291dbab6640a000d9d07dc",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 1.36,
+            "confidence": 0.33,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.05,
+              "1": 0.55,
+              "2": 0.4
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.05
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.46
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.27
+          }
+        },
+        "usage": {
+          "input_tokens": 2763,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 492.19
+        },
+        "unsupported_assertions": 0.27,
+        "framework_load": {
+          "type": "score",
+          "score": 1.36,
+          "confidence": 0.33,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.55,
+            "2": 0.4
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection",
+            "unsupported_assertions",
+            "framework_load"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-013",
+      "scenario_family": "overgeneralized_pattern",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-013",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "The colleague always ignores commitments."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nThe colleague always ignores commitments.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": true,
+        "sentence_ids": [
+          3
+        ],
+        "rationale": "Generalizes two reported missed handoffs to always ignoring commitments; the evidence does not establish an enduring pattern.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One feedback method; the overgeneralization does not add framework machinery."
+        }
+      },
+      "outbound_state_digest": "6ca8a38e3487fe28169d368beee93e301f11b6a1559dbdd5618995b91acfbef9",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.54
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.45,
+            "confidence": 0.33,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.6,
+              "1": 0.35,
+              "2": 0.05
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.09
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.64
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.6
+          }
+        },
+        "usage": {
+          "input_tokens": 2037,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 369.66
+        },
+        "unsupported_assertions": 0.94,
+        "framework_load": {
+          "type": "score",
+          "score": 0.45,
+          "confidence": 0.33,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.6,
+            "1": 0.35,
+            "2": 0.05
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "addresses_goal",
+            "teaches_selection",
+            "source_fidelity",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-014",
+      "scenario_family": "attributed_causal_evidence",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-014",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e3",
+            "text": "The testing lead reported that the testing delay was caused by the missing handoff files.",
+            "kind": "attributed_report",
+            "source": "synthetic-testing-lead"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "According to the testing lead, the missing handoff files caused the testing delay."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nAccording to the testing lead, the missing handoff files caused the testing delay.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "The causal account is accurately attributed to the testing lead and matches observation e3; it is not presented as independently verified.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One focused feedback method with a supported attributed report."
+        }
+      },
+      "outbound_state_digest": "c60bfeb08e804184e53cf09b118eeba6e4b56b0b59c0bf89f78a30bc374587ce",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.83
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.33,
+            "confidence": 0.5,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.69,
+              "1": 0.29,
+              "2": 0.02
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.06
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.57
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.26
+          }
+        },
+        "usage": {
+          "input_tokens": 2114,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 567.72
+        },
+        "unsupported_assertions": 0.26,
+        "framework_load": {
+          "type": "score",
+          "score": 0.33,
+          "confidence": 0.5,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.69,
+            "1": 0.29,
+            "2": 0.02
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-015",
+      "scenario_family": "grounded_book_terminology",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-015",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Use Webb's Factual Feedback (Chapter 12): Intention, Observation, Implication, Invitation, and Collaboration."
+        },
+        {
+          "id": 4,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 5,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nUse Webb's Factual Feedback (Chapter 12): Intention, Observation, Implication, Invitation, and Collaboration.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "The five named Factual Feedback moves match the supplied card; the events remain user-attributed and the question is proposed.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "Names the steps within one appropriate method without requiring an unrequested program or extra frameworks."
+        }
+      },
+      "outbound_state_digest": "c8cf5e195422bc0471de32148796e7d5c1501d4141b3648b7835dae1c2a49a2f",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.76
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.63,
+            "confidence": 0.05,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.47000000000000003,
+              "1": 0.44,
+              "2": 0.09
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.05
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.87
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.57
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.31
+          }
+        },
+        "usage": {
+          "input_tokens": 2034,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 386.71
+        },
+        "unsupported_assertions": 0.31,
+        "framework_load": {
+          "type": "score",
+          "score": 0.63,
+          "confidence": 0.05,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.47000000000000003,
+            "1": 0.44,
+            "2": 0.09
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection",
+            "unsupported_assertions"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    },
+    {
+      "case_id": "ua-016",
+      "scenario_family": "marked_factual_uncertainty",
+      "state": {
+        "schema_version": "ci.state.v2",
+        "case_id": "ua-016",
+        "mode": "advise",
+        "request": "Help me prepare a factual conversation about the two missed handoffs and explain one useful method.",
+        "goal": "Understand what happened and agree on the next handoff.",
+        "observations": [
+          {
+            "id": "e1",
+            "text": "Two agreed handoffs were missed.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          },
+          {
+            "id": "e2",
+            "text": "The receiving team postponed testing.",
+            "kind": "user_report",
+            "source": "synthetic-example"
+          }
+        ],
+        "interpretations": [],
+        "unknowns": [
+          "The colleague's account of what happened."
+        ],
+        "constraints": [
+          "Keep the conversation factual; do not assume motives."
+        ],
+        "requested_card": null,
+        "requested_action": "coaching_only",
+        "confirmed_process": false,
+        "data_class": "anonymized",
+        "language": "en"
+      },
+      "cards": [
+        "12-feedback"
+      ],
+      "sentences": [
+        {
+          "id": 1,
+          "text": "You report two missed handoffs."
+        },
+        {
+          "id": 2,
+          "text": "You report that the receiving team postponed testing."
+        },
+        {
+          "id": 3,
+          "text": "Your account describes two missed handoffs; whether there were other missed handoffs is not established."
+        },
+        {
+          "id": 4,
+          "text": "Use Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account."
+        },
+        {
+          "id": 5,
+          "text": "You could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\""
+        },
+        {
+          "id": 6,
+          "text": "Practice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement."
+        }
+      ],
+      "draft": "You report two missed handoffs.\nYou report that the receiving team postponed testing.\nYour account describes two missed handoffs; whether there were other missed handoffs is not established.\nUse Webb's Factual Feedback (Chapter 12) to discuss the reported events and invite the colleague's account.\nYou could ask privately: \"What happened from your perspective, and what would make the next handoff workable?\"\nPractice separating a reported event from your explanation of it, and notice whether the colleague can contribute to the next agreement.",
+      "human_label": {
+        "unsupported_assertion_present": false,
+        "sentence_ids": [],
+        "rationale": "Retains the supplied count of two and explicitly leaves additional events unestablished; no extra missed handoff is asserted.",
+        "framework_load": {
+          "level": 0,
+          "sentence_ids": [],
+          "rationale": "One focused method, one practical inquiry, and a bounded practice."
+        }
+      },
+      "outbound_state_digest": "95bf8dbbc82fa66f3e74ef09200baba717e87a16f9da3e0c258e63cfd8c25932",
+      "provider_status": "ok",
+      "provider_error_code": null,
+      "jev": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "addresses_goal": {
+            "type": "noul",
+            "noul": 0.81
+          },
+          "concrete_next_move": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "framework_load": {
+            "type": "score",
+            "score": 0.24,
+            "confidence": 0.64,
+            "legend": {
+              "0": "One focused method, optionally one clearly justified support.",
+              "1": "Some extra methods or terminology with limited explanation of need.",
+              "2": "A framework dump or multi-step curriculum not requested by the user."
+            },
+            "probabilities": {
+              "0": 0.77,
+              "1": 0.21,
+              "2": 0.02
+            }
+          },
+          "oversteps_agency": {
+            "type": "noul",
+            "noul": 0.05
+          },
+          "practice_or_observation": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "source_fidelity": {
+            "type": "noul",
+            "noul": 0.87
+          },
+          "teaches_selection": {
+            "type": "noul",
+            "noul": 0.66
+          },
+          "unsupported_assertions": {
+            "type": "noul",
+            "noul": 0.25
+          }
+        },
+        "usage": {
+          "input_tokens": 2050,
+          "output_tokens": 149
+        },
+        "transport": {
+          "attempts": 1,
+          "elapsed_ms": 388.39
+        },
+        "unsupported_assertions": 0.25,
+        "framework_load": {
+          "type": "score",
+          "score": 0.24,
+          "confidence": 0.64,
+          "legend": {
+            "0": "One focused method, optionally one clearly justified support.",
+            "1": "Some extra methods or terminology with limited explanation of need.",
+            "2": "A framework dump or multi-step curriculum not requested by the user."
+          },
+          "probabilities": {
+            "0": 0.77,
+            "1": 0.21,
+            "2": 0.02
+          }
+        },
+        "decision": {
+          "action": "revise_once",
+          "failed_checks": [
+            "teaches_selection"
+          ],
+          "authorizes_external_action": false,
+          "certifies_correctness": false,
+          "revision_attempt": 0
+        }
+      }
+    }
+  ],
+  "note": "Exploratory disagreements with supplied reviewer labels, not gold truth or calibration. Framework Score, confidence and distribution remain separate; no threshold search. This isolates postflight judgments without preflight routing or revision attempts.",
+  "reviewer": "Codex (AI; also authored this synthetic corpus); provisional judgments before diagnostic Jev outputs",
+  "reviewer_kind": "ai"
+}

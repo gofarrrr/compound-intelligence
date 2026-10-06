@@ -1,0 +1,6 @@
+interface:
+  display_name: "Compound Intelligence"
+  short_description: "Choose a leadership move and learn why it fits."
+  default_prompt: "Use $compound-intelligence to help with this situation, explain the selected method, and suggest one small practice."
+policy:
+  allow_implicit_invocation: true

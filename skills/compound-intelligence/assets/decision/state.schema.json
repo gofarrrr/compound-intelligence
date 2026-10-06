@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compound Intelligence input state v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "request"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ci.state.v2"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+    },
+    "request": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8000
+    },
+    "goal": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "mode": {
+      "enum": [
+        "advise",
+        "coach",
+        "learn",
+        "rehearse",
+        "reflect"
+      ],
+      "default": "advise"
+    },
+    "observations": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000
+          },
+          "kind": {
+            "enum": [
+              "user_report",
+              "attributed_report",
+              "source_excerpt"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 250
+          },
+          "observed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 80
+          }
+        }
+      }
+    },
+    "interpretations": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      }
+    },
+    "requested_card": {
+      "enum": [
+        null,
+        "01-understand",
+        "02-prioritize",
+        "03-ideate",
+        "04-decide",
+        "05-prepare",
+        "06-disagree",
+        "07-discuss",
+        "08-align",
+        "09-change",
+        "10-communicate",
+        "11-delegate",
+        "12-feedback",
+        "13-develop",
+        "14-collaborate",
+        "15-reset",
+        "16-uncertainty",
+        "17-stakeholder",
+        "18-support",
+        "19-recover",
+        "20-exits",
+        "21-team-resilience",
+        "ci-understand",
+        "ci-prioritize",
+        "ci-ideate",
+        "ci-decide",
+        "ci-prepare",
+        "ci-disagree",
+        "ci-discuss",
+        "ci-align",
+        "ci-change",
+        "ci-communicate",
+        "ci-delegate",
+        "ci-feedback",
+        "ci-develop",
+        "ci-collaborate",
+        "ci-reset",
+        "ci-uncertainty",
+        "ci-stakeholder",
+        "ci-support",
+        "ci-recover",
+        "ci-exits",
+        "ci-team-resilience"
+      ]
+    },
+    "requested_action": {
+      "enum": [
+        "coaching_only",
+        "personnel_decision",
+        "communicate_confirmed_process"
+      ],
+      "default": "coaching_only"
+    },
+    "confirmed_process": {
+      "type": "boolean",
+      "default": false
+    },
+    "data_class": {
+      "enum": [
+        "anonymized",
+        "public",
+        "restricted"
+      ],
+      "default": "restricted"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    }
+  },
+  "description": "Runtime additionally checks aggregate UTF-8 byte budget, duplicate observation IDs, and null-byte/blank text. Flags are user reports, never authority grants."
+}

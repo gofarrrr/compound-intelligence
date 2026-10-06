@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="$csp">
+  <title>$title · Compound Intelligence</title>
+  <style>
+    :root { color-scheme:light; --canvas:#f4f2f0; --card:#ffffff; --ink:#0c0a08; --dark:#1a1919; --muted:#6d6c6b; --line:#e5e7eb; --smoke:#d3d3d3; --action:#e4f222; }
+    * { box-sizing:border-box; }
+    [hidden] { display:none!important; }
+    body { margin:0; background:var(--canvas); color:var(--ink); font:400 16px/1.5 Inter,"Helvetica Neue",Helvetica,Arial,sans-serif; font-feature-settings:"ss01" on; }
+    button,input,textarea { font:inherit; }
+    h1,h2,h3,strong,label,summary,button { font-weight:400; }
+    button,summary { cursor:pointer; }
+    a { color:inherit; text-underline-offset:.2em; }
+    button,input,textarea { transition:background-color .3s ease-out,border-color .3s ease-out,color .3s ease-out; }
+    button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible { outline:2px solid var(--ink); outline-offset:4px; }
+    .skip { position:absolute; top:-100px; left:24px; padding:12px 20px; background:var(--action); border-radius:6px; z-index:2; }
+    .skip:focus { top:12px; }
+    .shell { max-width:1680px; margin:auto; padding:16px 24px; }
+    .interactive:not(.reading) .shell { height:100dvh; display:grid; grid-template-rows:auto minmax(0,1fr) auto; gap:12px; }
+    .topbar,.heading,.reference-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .topbar { min-height:40px; padding-bottom:8px; border-bottom:1px solid var(--smoke); }
+    .brand { display:flex; align-items:center; flex-wrap:wrap; gap:12px; font-size:16px; letter-spacing:-.02em; }
+    .brand .local-label { font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); border-left:1px solid var(--smoke); padding-left:12px; }
+    .heading { margin:12px 0; align-items:center; }
+    h1,h2,h3 { line-height:1.17; letter-spacing:-.025em; }
+    h1 { margin:0; font-size:clamp(28px,3.1vw,40px); line-height:1.05; }
+    h2 { font-size:24px; margin:0 0 16px; }
+    h3 { font-size:18px; margin:16px 0 8px; }
+    p { margin:0 0 12px; }
+    p:last-child { margin-bottom:0; }
+    .text { white-space:pre-wrap; overflow-wrap:anywhere; }
+    .goal { display:flex; align-items:flex-start; gap:12px; max-width:440px; font-size:15px; padding-left:20px; border-left:1px solid var(--smoke); }
+    .goal-label,.eyebrow { display:block; font-size:10px; line-height:1.5; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+    .goal-label { flex:none; margin:4px 0 0; }
+    .kind { border:1px solid var(--smoke); border-radius:6px; font-size:12px; line-height:1.5; padding:3px 8px; letter-spacing:0; }
+    .notice { display:flex; align-items:baseline; gap:12px; padding:8px 12px; border:1px solid var(--line); border-radius:12px; background:var(--card); font-size:13px; color:var(--muted); }
+    .notice::before { content:"Context"; flex:none; font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink); }
+    .workspace { display:grid; grid-template-columns:minmax(300px,1.05fr) minmax(390px,1.4fr) minmax(250px,.85fr); gap:16px; min-height:0; }
+    .workspace>* { min-width:0; min-height:0; }
+    .card,.task-area,.references { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px; }
+    .advice-rail { display:flex; flex-direction:column; gap:12px; }
+    .advice-rail .next { flex:1; background:var(--dark); color:var(--card); border-color:var(--dark); }
+    .next .eyebrow { color:var(--smoke); }
+    .advice-rail h2 { font-size:24px; margin-bottom:12px; }
+    .advice-rail>.card:not(.next) h2 { font-size:20px; margin-bottom:12px; }
+    .advice-rail>.card:not(.next) { border-radius:12px; }
+    .task-area { display:flex; flex-direction:column; }
+    nav { display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
+    .task-nav { padding:0 0 8px; margin-bottom:16px; border-bottom:1px solid var(--line); }
+    button { min-height:40px; padding:8px 12px; border:1px solid transparent; border-radius:6px; background:transparent; color:var(--ink); font-size:14px; line-height:1.5; }
+    button:hover { background:var(--canvas); }
+    .task-nav button[aria-pressed="true"],#export-notes { background:var(--action); color:var(--ink); }
+    #export-notes:hover { border-color:var(--ink); }
+    #layout-toggle { min-height:32px; padding:5px 12px; border-color:var(--ink); font-size:12px; flex:none; }
+    #layout-toggle[aria-pressed="true"] { background:var(--dark); color:var(--card); }
+    .task-area .card { padding:0; border:0; border-radius:0; background:transparent; margin:0 0 20px; }
+    .task-area .card:last-child { margin-bottom:0; }
+    .task-area .card+.card { padding-top:20px; border-top:1px solid var(--line); }
+    .task-area .view { min-height:0; }
+    .task-area h2 { margin-bottom:12px; }
+    .task-area .eyebrow { margin-bottom:4px; }
+    .task-area h3 { font-size:16px; margin-top:8px; }
+    .task-area .small { font-size:13px; }
+    label:not(.file-label) { display:block; font-size:14px; margin:12px 0 8px; }
+    textarea { display:block; width:100%; padding:12px; font-size:16px; line-height:1.5; border:1px solid var(--smoke); background:var(--canvas); border-radius:10px; height:112px; min-height:80px; resize:vertical; color:var(--ink); }
+    textarea:hover,textarea:focus { border-color:var(--ink); background:var(--card); }
+    .reflection-fields { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:12px; }
+    .reflection-fields>div { min-width:0; }
+    .reflection-fields p { font-size:15px; }
+    .reflection-fields textarea { height:108px; }
+    .references { display:flex; flex-direction:column; }
+    .references h2 { font-size:20px; margin:0; }
+    .reference-heading { margin-bottom:16px; }
+    #reference-nav { padding-bottom:12px; margin-bottom:16px; border-bottom:1px solid var(--line); }
+    #reference-nav button { padding:6px 8px; font-size:13px; min-height:36px; }
+    #reference-nav button[aria-pressed="true"] { background:var(--dark); color:var(--card); }
+    #reference-close { color:var(--muted); font-size:12px; min-height:32px; padding:4px 8px; }
+    .reference-caption,.reference-empty,.small { font-size:13px; color:var(--muted); }
+    .reference-caption { margin-top:auto; padding-top:12px; }
+    details { margin:0 0 16px; }
+    summary { font-size:14px; min-height:40px; padding:8px 0; }
+    .detail-body { font-size:15px; }
+    .detail-body h3 { margin:0 0 12px; font-size:11px; line-height:1.5; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+    .detail-body h3:not(:first-child),.detail-body>div+div { margin-top:20px; }
+    ul { margin:0; padding-left:18px; }
+    li { padding-left:2px; margin:0 0 12px; }
+    .notes { display:grid; grid-template-columns:minmax(170px,.9fr) auto minmax(190px,.8fr); align-items:center; gap:16px; border-top:1px solid var(--smoke); padding-top:12px; font-size:13px; }
+    .notes strong { font-size:14px; }
+    .notes p { margin:4px 0 0; }
+    .note-actions { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+    .file-label { font-size:13px; }
+    input[type="file"] { max-width:220px; font-size:12px; min-height:36px; color:var(--muted); }
+    input::file-selector-button { background:var(--card); color:var(--ink); border:1px solid var(--smoke); border-radius:6px; font:inherit; padding:7px 10px; margin-right:8px; cursor:pointer; }
+    input::file-selector-button:hover { border-color:var(--ink); }
+    .layout-hint { font-size:13px; color:var(--muted); margin:12px 0; display:none; }
+    .reading .layout-hint { display:block; }
+    .reading .shell { height:auto; }
+    .reading .workspace { display:block; margin:20px 0; }
+    .reading .workspace>*,.reading .view { margin-bottom:20px; }
+    .read-all .view[hidden],.read-all [data-reference][hidden] { display:block!important; }
+    .reading summary[hidden] { display:block!important; }
+    .read-all .reference-empty { display:none!important; }
+    .read-all .task-nav,.read-all #reference-nav,.read-all #reference-close { display:none!important; }
+    @media(max-width:1050px) {
+      .interactive:not(.reading) .shell { height:auto; display:block; }
+      .shell { padding:16px; }
+      .heading { display:block; margin:24px 0; }
+      .goal { display:block; max-width:none; margin-top:16px; padding:0; border:0; }
+      .goal-label { margin:0 0 8px; }
+      .workspace { display:block; margin:20px 0; }
+      .workspace>* { margin-bottom:16px; }
+      .notes { grid-template-columns:1fr; gap:12px; }
+      .layout-hint { display:block; }
+      .brand .local-label { display:none; }
+    }
+    @media(max-width:600px) {
+      .reflection-fields { grid-template-columns:1fr; }
+      .brand { gap:8px; font-size:14px; }
+      .topbar { align-items:flex-start; }
+      .notice { display:block; }
+      .notice::before { display:block; margin-bottom:4px; }
+      h1 { font-size:32px; }
+      .note-actions { gap:8px; }
+    }
+    @media(prefers-reduced-motion:reduce) { button,input,textarea { transition:none; } }
+    @media print {
+      body { background:white; font-size:11pt; }
+      .interactive:not(.reading) .shell { height:auto; display:block; padding:0; }
+      .workspace,.reflection-fields { display:block; }
+      .workspace>* { margin-bottom:20px; }
+      .view[hidden],[data-reference][hidden] { display:block!important; }
+      .skip,nav,.notes,#layout-toggle,#reference-close,.layout-hint,.reference-empty,.reference-caption { display:none!important; }
+      .advice-rail .next { background:white; color:var(--ink); border-color:var(--smoke); }
+      .next .eyebrow { color:var(--muted); }
+      details::details-content { content-visibility:visible!important; height:auto!important; }
+      details>*:not(summary) { display:block!important; }
+      summary[hidden] { display:block!important; }
+      .card,.task-area,.references { break-inside:avoid; }
+    }
+  </style>
+</head>
+<body data-packet-sha256="$packet_digest">
+  <a class="skip" href="#main">Skip to your workspace</a>
+  <div class="shell">
+    <header>
+      <div class="topbar"><div class="brand">Compound Intelligence <span class="local-label">Local workspace</span><span class="kind">$kind</span></div><button id="layout-toggle" type="button" aria-pressed="false" data-interactive hidden>Read all</button></div>
+      <div class="heading"><h1>$title</h1><div class="goal"><span class="goal-label">Your goal</span>$goal</div></div>
+      <aside class="notice" aria-label="Important context">$notice</aside>
+      <p class="layout-hint">Reading layout keeps longer content and enlarged text accessible. Your notes are preserved when you change views.</p>
+    </header>
+    <main id="main" class="workspace">
+      <aside class="advice-rail" aria-label="Advice to keep beside your work">
+        <section class="card next"><span class="eyebrow">Your direction</span><h2>Your next move</h2>$next_move</section>
+        $principle
+      </aside>
+      <section class="task-area" aria-label="Your current task">
+        <nav class="task-nav" aria-label="Coaching views" data-interactive hidden>$navigation</nav>
+        <section id="advice" class="view" aria-label="Prepare">$why$practice_preview</section>
+        $practice
+        $reflection
+      </section>
+      <aside class="references" aria-label="Supporting detail">
+        <div class="reference-heading"><h2>References</h2><button id="reference-close" type="button" data-interactive hidden>Close</button></div>
+        <nav id="reference-nav" aria-label="Choose supporting detail" data-interactive hidden></nav>
+        <div data-reference="evidence" data-label="Evidence">$evidence</div>
+        <div data-reference="example" data-label="Example"></div>
+        <div data-reference="sources" data-label="Sources">$sources</div>
+        <p class="reference-empty" hidden>Choose a reference above. Your advice and writing stay in place.</p>
+        <p class="reference-caption">Read and write at the same time. Changing your task keeps this reference open.</p>
+      </aside>
+    </main>
+    <footer>$notes<noscript><p class="small">All supplied tasks are readable. View switching and notes export require JavaScript; copy notes before closing.</p></noscript></footer>
+  </div>
+  <script>
+    (() => {
+      const panels = Array.from(document.querySelectorAll('.view'));
+      const buttons = Array.from(document.querySelectorAll('[data-view]'));
+      const inputs = Array.from(document.querySelectorAll('[data-note]'));
+      const status = document.getElementById('notes-status');
+      const noteKeys = ['practice', 'attempt', 'adjustment'];
+      const packetDigest = document.body.dataset.packetSha256;
+      let dirty = false;
+      const message = text => { if (status) status.textContent = text; };
+      const layoutButton = document.getElementById('layout-toggle');
+      const setReading = (value, all = false) => {
+        document.documentElement.classList.toggle('reading', value);
+        document.documentElement.classList.toggle('read-all', value && all);
+        layoutButton.textContent = value ? 'Return to workspace' : 'Read all';
+        layoutButton.setAttribute('aria-pressed', String(value));
+      };
+      // ponytail: long content reflows instead of clipping; no automatic summarising.
+      const checkFit = () => {
+        if (innerWidth <= 1050 || document.documentElement.classList.contains('reading')) return;
+        const regions = document.querySelectorAll('.advice-rail,.task-area,.references');
+        if (Array.from(regions).some(region => region.scrollHeight > region.clientHeight + 2)) setReading(true);
+      };
+      const checkSoon = () => requestAnimationFrame(checkFit);
+      layoutButton.addEventListener('click', () => {
+        setReading(!document.documentElement.classList.contains('reading'), true);
+        checkSoon();
+      });
+      const show = id => {
+        if (!document.documentElement.classList.contains('read-all')) setReading(false);
+        panels.forEach(panel => { panel.hidden = panel.id !== id; });
+        buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === id)));
+        checkSoon();
+      };
+      buttons.forEach(button => button.addEventListener('click', () => show(button.dataset.view)));
+      const example = document.querySelector('#practice details');
+      if (example) document.querySelector('[data-reference="example"]').append(example);
+      const references = Array.from(document.querySelectorAll('[data-reference]')).filter(panel => panel.querySelector('details'));
+      const referenceButtons = [];
+      const empty = document.querySelector('.reference-empty');
+      const close = document.getElementById('reference-close');
+      let selectedReference = null;
+      const showReference = id => {
+        if (!document.documentElement.classList.contains('read-all')) setReading(false);
+        selectedReference = id;
+        references.forEach(panel => { panel.hidden = panel.dataset.reference !== id; });
+        referenceButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.referenceButton === id)));
+        empty.hidden = id !== null;
+        close.hidden = id === null;
+        checkSoon();
+      };
+      references.forEach(panel => {
+        const detail = panel.querySelector('details');
+        detail.open = true;
+        detail.querySelector('summary').hidden = true;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = panel.dataset.label;
+        button.dataset.referenceButton = panel.dataset.reference;
+        button.setAttribute('aria-pressed', 'false');
+        button.addEventListener('click', () => showReference(panel.dataset.reference));
+        document.getElementById('reference-nav').append(button);
+        referenceButtons.push(button);
+      });
+      close.addEventListener('click', () => {
+        const previous = referenceButtons.find(button => button.dataset.referenceButton === selectedReference);
+        showReference(null);
+        previous?.focus();
+      });
+      document.querySelectorAll('[data-interactive]').forEach(element => { element.hidden = false; });
+      document.documentElement.classList.add('interactive');
+      show('advice');
+      showReference(references[0]?.dataset.reference || null);
+      window.addEventListener('resize', () => {
+        if (!document.documentElement.classList.contains('read-all')) setReading(false);
+        checkSoon();
+      });
+      const observer = new ResizeObserver(checkSoon);
+      document.querySelectorAll('.workspace .card,.detail-body').forEach(element => observer.observe(element));
+      inputs.forEach(input => input.addEventListener('input', () => {
+        dirty = true;
+        message('Unsaved notes. Export before closing.');
+      }));
+      window.addEventListener('beforeunload', event => {
+        if (dirty) { event.preventDefault(); event.returnValue = ''; }
+      });
+      const exportButton = document.getElementById('export-notes');
+      if (exportButton) exportButton.addEventListener('click', () => {
+        const notes = Object.fromEntries(noteKeys.map(key => [key, '']));
+        inputs.forEach(input => { notes[input.dataset.note] = input.value; });
+        const packet = {kind:'ci.presentation.notes.v1', packet_sha256:packetDigest, notes};
+        const url = URL.createObjectURL(new Blob([JSON.stringify(packet, null, 2)], {type:'application/json'}));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'compound-intelligence-notes.json';
+        document.body.append(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        message('Export requested. Check Downloads. No learning record updated.');
+      });
+      const importInput = document.getElementById('import-notes');
+      if (importInput) importInput.addEventListener('change', async () => {
+        const file = importInput.files[0];
+        if (!file) return;
+        if (dirty && !window.confirm('Replace your current notes with this export? Export first if you want to keep the current edits.')) {
+          importInput.value = '';
+          return;
+        }
+        try {
+          if (file.size > 262144) throw new Error('size');
+          const packet = JSON.parse(await file.text());
+          const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+          if (!isObject(packet) || Object.keys(packet).sort().join(',') !== 'kind,notes,packet_sha256'
+              || packet.kind !== 'ci.presentation.notes.v1' || packet.packet_sha256 !== packetDigest
+              || !isObject(packet.notes) || Object.keys(packet.notes).sort().join(',') !== 'adjustment,attempt,practice') throw new Error('packet');
+          for (const key of noteKeys) {
+            if (typeof packet.notes[key] !== 'string' || packet.notes[key].length > 12000
+                || (packet.notes[key] && !inputs.some(input => input.dataset.note === key))) throw new Error('notes');
+          }
+          inputs.forEach(input => { input.value = packet.notes[input.dataset.note]; });
+          dirty = false;
+          message('Notes loaded for this response. Nothing sent or added to learning records.');
+        } catch {
+          message('Could not load: invalid file or different response. Current notes kept.');
+        } finally {
+          importInput.value = '';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+{
+  "kind": "independent_ai_review_transcription",
+  "review_date": "2026-10-02",
+  "reviewer_kind": "ai",
+  "reviewer_identity_as_declared": "AI Reviewer (Gemini 3.8 Flash)",
+  "prior_exposure_as_declared": false,
+  "outside_sources_as_declared": "None; supplied evidence and source cards only.",
+  "identity_and_exposure_independently_verified": false,
+  "source": "User-pasted Gemini identification and complete B01–B16 table.",
+  "original_completed_packet_available": false,
+  "original_summary_file_available": false,
+  "reported_original_filenames": [
+    "gemini-review-completed.md",
+    "gemini-review-summary.json"
+  ],
+  "binding_method": "B01–B16 matched locally to the coordinator mapping; returned file bytes and reviewed packet hash were not supplied.",
+  "case_set_digest": "90fe9941e4810a1cfc056fd2753eb900790a70531e2fec879845871331e23395",
+  "registry_digest": "fb93c1acb34a1f65ed0097d7c1c4da2b16fe8d94661c3f854f806023715a1f35",
+  "prepared_original_packet_sha256": "b38224b7dd051e5f23b0194c6c1094be6435da212bbf42bb1a17b663ba725375",
+  "prepared_team_export_packet_sha256": "0d0c32559f2dab74546632c06ee179a649463a80c77452f2af011c510c094c44",
+  "labels": [
+    {
+      "alias": "B01",
+      "case_id": "ua-005",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        3
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 asserts that Webb's Factual Feedback requires a formal warning before inviting the colleague's perspective, which is unsupported by and contradicts the supplied Chapter 12 source card."
+    },
+    {
+      "alias": "B02",
+      "case_id": "ua-013",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        3
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 asserts an unsupported trait and absolute generalization (\"always ignores commitments\"), violating the constraint against assuming motives and violating the source card's prohibition against always/never claims and personality labels."
+    },
+    {
+      "alias": "B03",
+      "case_id": "ua-001",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "All draft sentences strictly reflect the supplied observations and the Chapter 12 source card without introducing unsupported factual or framework claims. Process is proportionate to the single-method request."
+    },
+    {
+      "alias": "B04",
+      "case_id": "ua-010",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 2,
+        "sentence_ids": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      "rationale": "Sentences 3–14 accurately describe source moves, but impose substantial unrequested process and curriculum (two full frameworks, multi-step lists, systems mapping, written preparation sheets, and transition drills) against an explicit 5-minute constraint for one focused opening and next move."
+    },
+    {
+      "alias": "B05",
+      "case_id": "ua-004",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 explicitly identifies unclear responsibility as an unestablished possibility and cautions the user to ask rather than assume, avoiding an unsupported factual assertion."
+    },
+    {
+      "alias": "B06",
+      "case_id": "ua-015",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Accurately reports observations and correctly summarizes the five moves of Factual Feedback from Chapter 12 without unsupported claims. Proportionate to the request."
+    },
+    {
+      "alias": "B07",
+      "case_id": "ua-014",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 accurately attributes the causal claim to the testing lead as provided in observation e3; all other sentences remain grounded."
+    },
+    {
+      "alias": "B08",
+      "case_id": "ua-008",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 provides direct guidance regarding the agreed handoffs reported in observation e1 without introducing ungrounded facts or motives."
+    },
+    {
+      "alias": "B09",
+      "case_id": "ua-002",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        3
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 asserts an unsupported cause and motive (\"because they don't care about the receiving team\"), directly violating the constraint not to assume motives and lacking support in the case evidence."
+    },
+    {
+      "alias": "B10",
+      "case_id": "ua-012",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Accurately distinguishes inquiry from recovery; the two frameworks directly serve the user's two distinct requested subgoals (investigating what happened and planning recovery) without excessive machinery."
+    },
+    {
+      "alias": "B11",
+      "case_id": "ua-007",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        3
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 asserts that the user has unilateral authority to remove the colleague from the project without consulting anyone, which is an unsupported assertion of authority nowhere stated in the case or source cards."
+    },
+    {
+      "alias": "B12",
+      "case_id": "ua-016",
+      "framework_applicable": true,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 explicitly bounds the user's report to the two missed handoffs and notes that further missed handoffs are not established; all sentences are fully grounded."
+    },
+    {
+      "alias": "B13",
+      "case_id": "ua-009",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        1
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 1 incorrectly asserts that the user reported three missed handoffs, contradicting observation e1 and the request which specify two missed handoffs."
+    },
+    {
+      "alias": "B14",
+      "case_id": "ua-003",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        3
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 asserts an unsupported motive and interpersonal interpretation (\"is signaling that your priorities do not deserve respect\"), violating the constraint not to assume motives and lacking factual support."
+    },
+    {
+      "alias": "B15",
+      "case_id": "ua-011",
+      "framework_applicable": false,
+      "unsupported_assertion_present": false,
+      "unsupported_sentence_ids": [],
+      "framework_load": {
+        "level": null,
+        "sentence_ids": []
+      },
+      "rationale": "Non-coaching utility request (literal string conversion). The draft accurately outputs the requested transformed text without ungrounded assertions; framework review is not applicable."
+    },
+    {
+      "alias": "B16",
+      "case_id": "ua-006",
+      "framework_applicable": true,
+      "unsupported_assertion_present": true,
+      "unsupported_sentence_ids": [
+        3
+      ],
+      "framework_load": {
+        "level": 0,
+        "sentence_ids": []
+      },
+      "rationale": "Sentence 3 asserts an unsupported personality trait and character judgment (\"The colleague is an unreliable person\"), violating the constraint not to assume motives and contravening the source card's guidance against character judgments."
+    }
+  ],
+  "summary": {
+    "cases": 16,
+    "unsupported_positive_cases": 7,
+    "unsupported_negative_cases": 9,
+    "agreement_with_original_ai_binary_labels": 16,
+    "framework_different_from_original_ai_case_ids": [
+      "ua-005",
+      "ua-011"
+    ]
+  },
+  "independent_human_validation": false,
+  "note": "Transcribed from user-provided reviewer text, not the original returned artifacts. Null framework level preserves Gemini N/A for ua-011. Model agreement on authored cases does not establish human accuracy, representative calibration or coaching effectiveness."
+}

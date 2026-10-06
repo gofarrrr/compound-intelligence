@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.epub
+learning-home/
+.dist/
+.env
+.env.*
+*.pem
+*.key
+receipts/
+private/
+.local/

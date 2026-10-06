@@ -1,0 +1,94 @@
+{
+  "kind": "offline_followup_plans",
+  "date": "2026-10-02",
+  "production_modified": false,
+  "live_runs_completed": false,
+  "plans": [
+    {
+      "name": "remaining_grounded",
+      "network_called": false,
+      "case_ids": [
+        "ua-008",
+        "ua-011",
+        "ua-014",
+        "ua-015",
+        "ua-016"
+      ],
+      "corpus_path": "evals/review-diagnostic-cases.jsonl",
+      "case_set_digest": "90fe9941e4810a1cfc056fd2753eb900790a70531e2fec879845871331e23395",
+      "experiment_digest": "3b630af4c003f67f43279a68a6468e1a7118db1cc004cd2d8a4bb28ec350c8f9",
+      "conditions": {
+        "G": {
+          "question_digest": "aafdc55c31551ada8d9c40d7fa18a14d6338a6e1876b40ab26ba48cb8e411dd0",
+          "question_version": "ci.review-ablation.v1.G"
+        }
+      },
+      "repeats": 5,
+      "requests": 25,
+      "maximum_http_attempts": 50,
+      "model": "jev-1.13.0",
+      "policy_digest": "5fb4e7a81e47f49b1d08e74bf86e1204847081d50060211341e5f187f3e741b9",
+      "unsupported_assertions_cutoff": 0.25
+    },
+    {
+      "name": "matched_boundaries",
+      "network_called": false,
+      "case_ids": [
+        "bc-001",
+        "bc-002",
+        "bc-003",
+        "bc-004",
+        "bc-005",
+        "bc-006"
+      ],
+      "corpus_path": "evals/review-boundary-cases.jsonl",
+      "case_set_digest": "ac7f3c2ed42a5fec8f02522de0e796ef0a4dc5799b63692bf97752c1060e35cd",
+      "experiment_digest": "6c881cad076a67851d8cc3452e7fd80db26156fd0995096862be061c411918f7",
+      "conditions": {
+        "A": {
+          "question_digest": "cfe7583e66ad259cc4fab55ed1da6394bbae2538532836b6b941d0fb7d475b09",
+          "question_version": "ci.postflight.v2.0.0"
+        },
+        "G": {
+          "question_digest": "aafdc55c31551ada8d9c40d7fa18a14d6338a6e1876b40ab26ba48cb8e411dd0",
+          "question_version": "ci.review-ablation.v1.G"
+        }
+      },
+      "repeats": 5,
+      "requests": 60,
+      "maximum_http_attempts": 120,
+      "model": "jev-1.13.0",
+      "policy_digest": "5fb4e7a81e47f49b1d08e74bf86e1204847081d50060211341e5f187f3e741b9",
+      "unsupported_assertions_cutoff": 0.25
+    },
+    {
+      "name": "balanced_proportionality",
+      "network_called": false,
+      "case_ids": [
+        "hc-001",
+        "hc-002",
+        "hc-003",
+        "hc-004"
+      ],
+      "corpus_path": "evals/review-framework-cases.jsonl",
+      "case_set_digest": "3eff8aae1e5369c0ce6ad62f0bc4dbb124f6675bea0ca684529218d810700968",
+      "experiment_digest": "941b529ca4e80dcb42fb99485a42dd7a518a8040f0af56a5b9a850144e42518f",
+      "conditions": {
+        "A": {
+          "question_digest": "cfe7583e66ad259cc4fab55ed1da6394bbae2538532836b6b941d0fb7d475b09",
+          "question_version": "ci.postflight.v2.0.0"
+        },
+        "H": {
+          "question_digest": "8296fedb8b8ebd0e0a5dae930f4c45d735de9803496c0bc806f6f91184f4e0b7",
+          "question_version": "ci.review-ablation.v1.H"
+        }
+      },
+      "repeats": 5,
+      "requests": 40,
+      "maximum_http_attempts": 80,
+      "model": "jev-1.13.0",
+      "policy_digest": "5fb4e7a81e47f49b1d08e74bf86e1204847081d50060211341e5f187f3e741b9",
+      "unsupported_assertions_cutoff": 0.25
+    }
+  ]
+}

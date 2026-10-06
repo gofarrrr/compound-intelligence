@@ -1,0 +1,17 @@
+{
+  "version": "ci.policy.v2.0.0",
+  "calibration_status": "uncalibrated_starting_policy",
+  "notice": "Advisory shortlist only. Numerical thresholds are engineering starting points, not validated effectiveness or certainty.",
+  "thresholds": {
+    "fit_min": 0.65,
+    "fit_margin": 0.12,
+    "signal_high": 0.7,
+    "risk_review": 0.6,
+    "irrelevance_max": 0.25,
+    "review_positive_min": 0.75,
+    "review_negative_max": 0.25
+  },
+  "max_candidate_cards": 3,
+  "max_applied_cards": 2,
+  "max_revision_attempts": 1
+}

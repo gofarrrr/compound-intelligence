@@ -1,0 +1,22 @@
+{
+  "name": "compound-intelligence",
+  "version": "0.3.0",
+  "description": "Experimental leadership coaching with manual case continuity, source-grounded methods and optional TypeSafe/Jev assistance.",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Compound Intelligence",
+    "shortDescription": "Choose the right leadership tool, understand it, and learn from practice.",
+    "longDescription": "One context-first skill, 21 internal book-grounded cards, optional typed routing and review, rehearsal, and consent-based learning. Does not make personnel decisions.",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me think through this management situation and explain the tool you choose.",
+      "Coach me through a difficult conversation.",
+      "Help me learn from what happened without overgeneralizing."
+    ]
+  }
+}

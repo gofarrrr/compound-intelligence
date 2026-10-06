@@ -1,0 +1,173 @@
+{
+  "notice": "Canned values, NOT results from Jev or a clinical assessment.",
+  "state": {
+    "schema_version": "ci.state.v2",
+    "case_id": "synthetic-handoffs-01",
+    "mode": "advise",
+    "request": "A colleague missed two agreed handoffs. The receiving team postponed testing. I do not know why. Help me prepare a conversation and explain the method.",
+    "goal": "Understand what happened and agree on a workable next handoff.",
+    "observations": [
+      {
+        "id": "e1",
+        "text": "Two agreed handoffs were missed.",
+        "kind": "user_report",
+        "source": "synthetic-example"
+      },
+      {
+        "id": "e2",
+        "text": "The receiving team postponed testing.",
+        "kind": "user_report",
+        "source": "synthetic-example"
+      }
+    ],
+    "interpretations": [],
+    "unknowns": [
+      "The colleague's account of what happened."
+    ],
+    "constraints": [
+      "Keep the conversation factual; do not assume motives."
+    ],
+    "requested_card": null,
+    "requested_action": "coaching_only",
+    "confirmed_process": false,
+    "data_class": "anonymized",
+    "language": "en"
+  },
+  "answers": {
+    "leadership_relevance": {
+      "type": "noul",
+      "noul": 0.96
+    },
+    "evidence_quality": {
+      "type": "score",
+      "score": 2.0,
+      "confidence": 1.0,
+      "legend": {
+        "0": "Only labels or a vague complaint; neither a concrete event nor a defined learning goal.",
+        "1": "A concrete event or desired outcome is described, but important context remains unknown.",
+        "2": "A clear learning goal, or events plus an objective sufficient for a reversible next move. This does not establish anyone's motives or grant permission."
+      },
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 1.0
+      }
+    },
+    "motive_attribution": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "missing_perspective": {
+      "type": "noul",
+      "noul": 0.9
+    },
+    "self_reported_pressure": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "structural_overload": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "colleague_struggle": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "consequential_action": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "immediate_harm": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "completed_attempt": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_01": {
+      "type": "noul",
+      "noul": 0.62
+    },
+    "fit_02": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_03": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_04": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_05": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_06": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_07": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_08": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_09": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_10": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_11": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_12": {
+      "type": "noul",
+      "noul": 0.88
+    },
+    "fit_13": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_14": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_15": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_16": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_17": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_18": {
+      "type": "noul",
+      "noul": 0.58
+    },
+    "fit_19": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_20": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "fit_21": {
+      "type": "noul",
+      "noul": 0.1
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "checked_on": "2026-10-02",
+  "new_version": "0.2.0",
+  "comparison_source": "Original conversation artifact compound-intelligence-plugin.zip (v0.1.0)",
+  "cards_total": 21,
+  "all_byte_identical": true,
+  "cards": [
+    {
+      "file": "01-understand.md",
+      "sha256": "dd6dbf328ba6aa2375a0b460269e0b89b8ec022f62f78c470fe3816333d17a53",
+      "byte_identical": true
+    },
+    {
+      "file": "02-prioritize.md",
+      "sha256": "04510535b2e41a4fdff7f82884e901649e1995fbbe70116b401d71731e7fc4ee",
+      "byte_identical": true
+    },
+    {
+      "file": "03-ideate.md",
+      "sha256": "2cb11c1f25d05f5de67be690f4013a80b06c9b47faf143edaf2fee81405b3490",
+      "byte_identical": true
+    },
+    {
+      "file": "04-decide.md",
+      "sha256": "45bbad15a0d06c305c1f81a8a69f719386b8e64c11ebe735d271c5f13077268d",
+      "byte_identical": true
+    },
+    {
+      "file": "05-prepare.md",
+      "sha256": "d1eeaa7cd27f7d3730807a5da706aa0ba7271880504a8e8ec31a7259129b5cd3",
+      "byte_identical": true
+    },
+    {
+      "file": "06-disagree.md",
+      "sha256": "ac57b078b40a83b1027302b99680c2bd3f98641eb9d7e6e8ffb0e3684d230d85",
+      "byte_identical": true
+    },
+    {
+      "file": "07-discuss.md",
+      "sha256": "cde08ef57634fb6071f9fb0b311f4d46414d79c10cb0fac27baefd157261b68e",
+      "byte_identical": true
+    },
+    {
+      "file": "08-align.md",
+      "sha256": "98c5ad161670837b7d2dc698f51f4fc2aa51e9f43e93a2977fb4338e23dc5abe",
+      "byte_identical": true
+    },
+    {
+      "file": "09-change.md",
+      "sha256": "eccec3aef4dec4bfacd8e457cb98e2bf7c6dfb814511e3515a1b3db3f6f62532",
+      "byte_identical": true
+    },
+    {
+      "file": "10-communicate.md",
+      "sha256": "bf2b461d804f7f6eb5b8eb7d9dc3b1fd1e582fe8a0658471f3b4e2f9359b2dd3",
+      "byte_identical": true
+    },
+    {
+      "file": "11-delegate.md",
+      "sha256": "cde34a72fc78aef36b5d6f3193317c5599a0ac1e8432b09104831fa1c1bb4d1f",
+      "byte_identical": true
+    },
+    {
+      "file": "12-feedback.md",
+      "sha256": "41ded84978ea60c9480a0b7db8e54aeeaafcba93e456b499a0bc34347bd6a1db",
+      "byte_identical": true
+    },
+    {
+      "file": "13-develop.md",
+      "sha256": "5bc46539152d3a5a24db538f1795371b2beae0be3eba91e155ecb709a5bbe509",
+      "byte_identical": true
+    },
+    {
+      "file": "14-collaborate.md",
+      "sha256": "ed0f7008e27246657ded570945c841e6144d85cde859644cc54a8e97de2c527e",
+      "byte_identical": true
+    },
+    {
+      "file": "15-reset.md",
+      "sha256": "0a99d4d28710bb2445e1f4442746ae685e309949904fac9984d4169a813fbaf6",
+      "byte_identical": true
+    },
+    {
+      "file": "16-uncertainty.md",
+      "sha256": "8993b171d0c52a3077cf3e016550678280c37ac06254d156838a39c9aa94c00e",
+      "byte_identical": true
+    },
+    {
+      "file": "17-stakeholder.md",
+      "sha256": "06bfb72b8e9285577840de664204d85ddc124621d196644985d71320260e8f9a",
+      "byte_identical": true
+    },
+    {
+      "file": "18-support.md",
+      "sha256": "47e92f56c7ecaf752d0583079d373da87413329233cd3e655f3f151d7ba74306",
+      "byte_identical": true
+    },
+    {
+      "file": "19-recover.md",
+      "sha256": "5625736d284bfd52245778061490c8ad9bb6d27b6eaf872a40606cf7d3470d48",
+      "byte_identical": true
+    },
+    {
+      "file": "20-exits.md",
+      "sha256": "4e5c8666028eac2978c74f60477639792c5a34e4114d5fe12608384a2f227dcf",
+      "byte_identical": true
+    },
+    {
+      "file": "21-team-resilience.md",
+      "sha256": "82f9ca4fc20043c23a0da2be811faf9c59ef307dbe91bbdcafe34db079a3f652",
+      "byte_identical": true
+    }
+  ]
+}

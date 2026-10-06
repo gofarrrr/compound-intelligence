@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compound Intelligence receipt envelope v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "kind",
+    "receipt_id",
+    "created_at",
+    "case_id",
+    "state_digest",
+    "question_version",
+    "question_digest",
+    "policy_version",
+    "policy_digest",
+    "calibration_status",
+    "provider_status",
+    "answers",
+    "authorizes_external_action",
+    "integrity_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ci.receipt.v2"
+    },
+    "kind": {
+      "enum": [
+        "routing",
+        "review"
+      ]
+    },
+    "receipt_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+    },
+    "state_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "question_version": {
+      "type": "string"
+    },
+    "question_digest": {
+      "type": "string"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "policy_digest": {
+      "type": "string"
+    },
+    "calibration_status": {
+      "const": "uncalibrated_starting_policy"
+    },
+    "provider_status": {
+      "enum": [
+        "not_called",
+        "ok",
+        "unavailable"
+      ]
+    },
+    "answers": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "authorizes_external_action": {
+      "const": false
+    },
+    "integrity_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Extensible receipt envelope, not an authentication protocol. Runtime enforces exact request-specific answer types and keys and verifies state/source/question/policy bindings before review."
+}

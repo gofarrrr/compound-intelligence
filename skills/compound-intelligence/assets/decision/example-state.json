@@ -1,0 +1,33 @@
+{
+  "schema_version": "ci.state.v2",
+  "case_id": "synthetic-handoffs-01",
+  "mode": "advise",
+  "request": "A colleague missed two agreed handoffs. The receiving team postponed testing. I do not know why. Help me prepare a conversation and explain the method.",
+  "goal": "Understand what happened and agree on a workable next handoff.",
+  "observations": [
+    {
+      "id": "e1",
+      "text": "Two agreed handoffs were missed.",
+      "kind": "user_report",
+      "source": "synthetic-example"
+    },
+    {
+      "id": "e2",
+      "text": "The receiving team postponed testing.",
+      "kind": "user_report",
+      "source": "synthetic-example"
+    }
+  ],
+  "interpretations": [],
+  "unknowns": [
+    "The colleague's account of what happened."
+  ],
+  "constraints": [
+    "Keep the conversation factual; do not assume motives."
+  ],
+  "requested_card": null,
+  "requested_action": "coaching_only",
+  "confirmed_process": false,
+  "data_class": "anonymized",
+  "language": "en"
+}
